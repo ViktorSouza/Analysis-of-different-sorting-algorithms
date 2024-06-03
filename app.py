@@ -26,9 +26,10 @@
  #################################################################
 
 import matplotlib.pyplot as plt
-from random import random
+import random
 from random import randint
 from sys import platform
+random.seed(32)
 import time
 
 mytime = time.perf_counter
@@ -81,11 +82,16 @@ def selection(V, n):
 
 
 def bubble(V, n):
+
     lim = n - 1
     while lim >= 0:
+        isIncreasing = True
         for j in range(lim):
             if V[j] > V[j + 1]:
+                isIncreasing = False
                 V[j], V[j + 1] = V[j + 1], V[j]
+        if(isIncreasing==True): 
+                break
         lim -= 1
 
 
@@ -99,6 +105,8 @@ def insertion(V, n):
                 if j <= 0:
                     break
                 j -= 1
+def sort(V,n):
+    V.sort()
 
 
 
@@ -115,47 +123,77 @@ def timeMe(func, V, n, m, p):
         start = mytime()
         func(V, n)
         end = mytime()
-        perf.append((end - start)/1000)
+        perf.append(end - start)
     return (mediaT(perf, len(perf)), varT(perf, len(perf)))
 
 
 def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
-    for i in range(len(mpontos)):
-        plt.errorbar(percentages, mediaMCMPi[i], yerr=desvioMCMPi[i],label = sizes[i])
-        plt.ylabel('Tempo')
-        plt.xlabel("Porcentagem de embaralhamento")
+    for i in range(len(mediaMCMPi)):
+        plt.errorbar(mpontos, mediaMCMPi[i],desvioMCMPi[i],label = algorithms_names[i],fmt='o')
         plt.legend()
-        plt.savefig(f'./plots/percent_{i}.png')
-        plt.plot
+    plt.savefig('./plots/results.png')
+    plt.show()
 
 
 
 
 # sizes = [1000, 5000, 10000, 50000, 100000]
-sizes = [10,20,30]
+sizes = [1000,2000,3000,4000,5000,10000]
 percentages = [0.01,0.03,0.05,0.1,0.5]
-algorithms = [selection,bubble,counting,insertion]
-algorithms_names = ['Selection','Bubble','Counting','Insertion']
+# algorithms = [selection,bubble,counting,insertion,sort]
+# algorithms_names = ['Seleção','Bolha','Contagem','Inserção','Padrão']
+algorithms = [selection,bubble,insertion,counting,sort]
+algorithms_names = ['Seleção','Bolha','Inserção','Contagem','Padrão']
 
 def main():
-    # algorithms = [selection,bubble,insertion,counting]
-    for algorithm in algorithms:
-        avg_result = []
-        std_result = []
-        for i in sizes:
-            avg = []
-            std = []
-            V = [i for i in range(i)]
-            for j in percentages:
-                V_copy = embaralha(V,len(V),i)
-                result = timeMe(algorithm,V,i,10,j)
-                std.append(result[1])
-                avg.append(result[0])     
+    # Como não há o parâmetro para colocar as legendas em GraficaSortings, teve-se que colocar os nomes e os algoritmos como variáveis globais.
+    global algorithms_names
+    global algorithms
+    n = 5000
+    avg_exp_1 = []
+    std_exp_1 = []
+    avg_exp_2 = []
+    std_exp_2 = []
 
-            avg_result.append(avg)
-            std_result.append(std)
-        print(avg_result)
-        GraficaSortings(sizes,avg_result,std_result)
+    # for algorithm in algorithms:
+    for i,algorithm in enumerate(algorithms):
+        avg = []
+        std = []
+        for size in sizes:
+            Vtmp = list([randint(0,9999) for _ in range(size)])
+
+            media,var = timeMe(func=algorithm,V=Vtmp,n=size,m=10,p=0)
+            avg.append(media)
+            std.append(var)
+            print(f'Size, {algorithms_names[i]}, {size}')
+
+        avg_exp_1.append(avg)
+        std_exp_1.append(std)
+        
+    plt.ylabel('Tempo')
+    plt.xlabel("Quantidade de elementos")
+    GraficaSortings(sizes,avg_exp_1,std_exp_1)
+
+
+    algorithms = [bubble,insertion]
+    algorithms_names = ['Bolha','Inserção']
+    # for algorithm in algorithms:
+    for i,algorithm in enumerate(algorithms):
+        avg = []
+        std = []
+        V  = [i for i in range(n)]
+        for percent in percentages:
+            Vtmp = list(V)
+            embaralha(Vtmp,len(Vtmp),percent)
+            media,var = timeMe(func=algorithm,V=Vtmp,n=len(Vtmp),m=10,p=percent)
+            avg.append(media)
+            std.append(var)
+            print(f'Percentage, {algorithms_names[i]}, {percent*100}%')
+        avg_exp_2.append(avg)
+        std_exp_2.append(std)
+    plt.ylabel('Tempo')
+    plt.xlabel("Porcentagem de embaralhamento")
+    GraficaSortings(percentages,avg_exp_2,std_exp_2)
 
         
 
