@@ -7,21 +7,58 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \author{João Viktor Souza Almeida}
-\title{Análise de diferentes algoritmos de ordenação \[x^2-3+5\]}
+\title{Análise de diferentes algoritmos de ordenação}
 
 
 
 \begin{document}
-\maketitle
+\begin{titlepage} %iniciando a "capa"
+    \begin{center} %centralizar o texto abaixo
+    {\large Universidade de São Paulo}\\[0.2cm] %0,2cm é a distância entre o texto dessa linha e o texto da próxima
+    {\large Instituto de Matemática e Estatística}\\[0.2cm] % o comando \\ "manda" o texto ir para próxima linha
+    {\large Departamento de Ciência da Computação}\\[0.2cm]
+    {\large Bacharelado em Ciência da Computação}\\[0.2cm]
+    {\large MAC110 - Introdução à Computação}\\[5.1cm]
+    {\bf \huge Análise de diferentes algoritmos de ordenação}\\[5.1cm] 
+    \end{center} %término do comando centralizar
+    {\large Aluno(a): João Viktor Souza Almeida}\\[0.7cm] % o comando \large deixa o texto grande
+    {\large Professor: Roberto Hirata Junior}\\[5.1cm]
+    \end{titlepage} %término da "capa"
+
+\subsection*{Resumo}
+O relatório a seguir visa analisar "alguns" algoritmos de ordenação e como suas eficiências mudam dadas diferentes condições iniciais, tais como porcentagem de ordenação e número de elementos da lista a ser ordenada. 
 \
-\textbf{Palavras-chave:} insertion, bubble, counting, selection, algoritmos, ordenação, análise;
+\section*{Metodologia}
+Na criação do relatório, os testes dos algoritmos foram realizados utilizando a linguagem de programação Python. Durante a execução dos algoritmos, foi utilizada uma máquina com as seguintes configurações:
+\begin{itemize}
+\item    Processador (CPU): Ryzen 5 3350G 
+\item Memória (RAM): 16GB DDR4 @ 3200MHz
+\item Armazenamento: 256GB SSD
+\item Placa de Vídeo (GPU): Radeon Vega 11
+\item Sistema Operacional: Windows 11 Pro
+\end{itemize}
+Além disso, durante a execução dos algoritmos, foram desabilitados o máximo de programas possíveis a fim de minimizar as interferências nos resutlados dos testes. 
 
+Para computar a média de execução, foi invocada uma função \textit{timeMe}, na qual eram armazenados os resultados das 10 itinerações do mesmo algoritmo e, no final, retornava a média e o desvio padrão dos resultados.
+
+Para fins simplificatórios, foram ignorados possíveis margens de erros da função que retorna a lista embaralhada. Contudo, essa margem de erro torna-se inotável durante os testes devido ao tamanho das listas utilizadas.
+\\
+\\
+\\
+\noindent\textbf{Palavras-chave:} insertion, bubble, counting, selection, algoritmos, ordenação, análise;
+
+\newpage
 \tableofcontents
-\section{Algoritmo de Seleção}
-O algoritmo de Seleção é um algoritmo de ordenação no qual, a cada itineração, o menor elemento da lista é garantido estar na posição correta. Ou seja, na primeira itineração, o menor elemento ficará na primeira posição da lista, na segunda itineração, o segundo elemento, e assim por diante. 
-\par
-Acerca do seu desempenho, o algoritmo em questão possui um "desempenho" quadrático, isto é, para $n$ números da lista, o algoritmo fará $n(n-1)$ comparações a fim de ordernar totalmente a lista. Uma observação pertinente é a quantidade de comparações a ser feita independe da porcentagem de ordenação da lista.
-% descrever o porquê isto ocorre.
+\include{selection.tex}
+\include{bubble.tex}
+\include{insertion.tex}
+\include{count.tex}
 
+
+
+
+\section*{Conclusões}
+Os algoritmos em questão, apesar de possuírem diferentes desempenhos dependendo da ordenação da lista, possuem um baixo proveito com listas muito grande. Além disso, é notável que o método importado do Python contém diversos algoritmos, que são usados dependendo do contexto.
+Portanto, a fim de ordenar uma lista com maior rapidez, é notável que a função built-in do Python deve, pelo menos para listas grandes, ser usada em relação aos outros métodos outrora discutidos.
 
 \end{document}

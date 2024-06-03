@@ -1,2 +1,5 @@
 \babel@toc {portuguese}{}\relax 
-\contentsline {section}{\numberline {1}Algoritmo de Seleção}{1}{}%
+\contentsline {section}{\numberline {1}Algoritmo de seleção}{3}{}%
+\contentsline {section}{\numberline {2}Algoritmo de bolha}{4}{}%
+\contentsline {section}{\numberline {3}Algoritmo de inserção}{5}{}%
+\contentsline {section}{\numberline {4}Algoritmo de contagem}{6}{}%

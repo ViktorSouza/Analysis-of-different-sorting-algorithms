@@ -1,3 +1,30 @@
+#################################################################
+ ## AO PREENCHER ESSE CABEÇALHO COM O MEU NOME E O MEU NÚMERO USP,
+ ## DECLARO QUE SOU O ÚNICO AUTOR E RESPONSÁVEL POR ESSE PROGRAMA.
+ ## TODAS AS PARTES ORIGINAIS DESSE EXERCÍCIO PROGRAMA (EP) FORAM
+ ## DESENVOLVIDAS E IMPLEMENTADAS POR MIM SEGUINDO AS INSTRUÇÕES
+ ## DESSE EP E QUE PORTANTO NÃO CONSTITUEM DESONESTIDADE ACADÊMICA
+ ## OU PLÁGIO.
+ ## DECLARO TAMBÉM QUE SOU RESPONSÁVEL POR TODAS AS CÓPIAS
+ ## DESSE PROGRAMA E QUE EU NÃO DISTRIBUI OU FACILITEI A
+ ## SUA DISTRIBUIÇÃO. ESTOU CIENTE QUE OS CASOS DE PLÁGIO E
+ ## DESONESTIDADE ACADÊMICA SERÃO TRATADOS SEGUNDO OS CRITÉRIOS
+ ## DIVULGADOS NA PÁGINA DA DISCIPLINA.
+ ## ENTENDO QUE EPS SEM ESTE CABEÇALHO NÃO SERÃO CORRIGIDOS E,
+ ## AINDA ASSIM, PODERÃO SER PUNIDOS POR DESONESTIDADE ACADÊMICA.
+ ## Nome : João Viktor Souza Almeida
+ ## NUSP : 15521614
+ ## Turma:
+ ## Prof.: Roberto Hirata Jr.
+ ## Referências: Com exceção das rotinas fornecidas no enunciado
+ ## e em sala de aula, caso você tenha utilizado alguma referência,
+ ## liste-as abaixo para que o seu programa não seja considerado
+ ## plágio ou irregular.
+ ## Exemplo:
+ ##- O algoritmo Quicksort foi baseado em
+ ## http://wiki.python.org.br/QuickSort
+ #################################################################
+
 import matplotlib.pyplot as plt
 from random import random
 from random import randint
@@ -6,10 +33,6 @@ import time
 
 mytime = time.perf_counter
 plt.style.use("seaborn-v0_8")
-results = []
-sizes = [100,200,500]
-percentages = [0,0.1,0.5,1]
-std = []
 
 def mediaT(V, n):
     values_sum = 0
@@ -97,53 +120,43 @@ def timeMe(func, V, n, m, p):
 
 
 def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
-    """ 
-    media [1,2,3,4,5]
-
-    mpontos = [    x% y% z% w%
-        n = 1000  [1, 2, 3, 4]
-        n = 5000  [1, 2, 3, 4]
-        n =...    [1, 2, 3, 4]
-        n =...    [1, 2, 3, 4]
-        n =...    [1, 2, 3, 4]
-    ]
-     """
-    for size in mpontos:
-        # plt.label()
-        plt.xlabel("Porcentagem")
+    for i in range(len(mpontos)):
+        plt.errorbar(percentages, mediaMCMPi[i], yerr=desvioMCMPi[i],label = sizes[i])
         plt.ylabel('Tempo')
-        plt.errorbar(size, mediaMCMPi, yerr=desvioMCMPi, fmt="o",)
-        plt.savefig(f'./plot_{size}numbers.png')
-        # for percentage in size:
+        plt.xlabel("Porcentagem de embaralhamento")
+        plt.legend()
+        plt.savefig(f'./plots/percent_{i}.png')
+        plt.plot
 
 
-# Just my code :D l
-# def plot(func, label, m, p): 
-#     x = [i/m for i in range(m)]
-#     y = [0 for _ in range(m)]
-#     std = [0 for _ in range(m)]
-#     V = [randint(0,9999) for _ in range(m)]
-#     for i in range(m):
-#         copy_V = list(V)
-#         embaralha(copy_V, len(copy_V), i/m)
-#         y[i], std[i] = timeMe(func, copy_V, len(copy_V), 10, i/100)
-#     plt.plot(x, [i for i in y])
-#     # plt.errorbar(x, [i/1000 for i in y], yerr=std, fmt="o")
-#     # print(x)
-#     plt.xlabel('Embaralhamento')
-#     plt.ylabel('Tempo (ms)')
+
+
+# sizes = [1000, 5000, 10000, 50000, 100000]
+sizes = [10,20,30]
+percentages = [0.01,0.03,0.05,0.1,0.5]
+algorithms = [selection,bubble,counting,insertion]
+algorithms_names = ['Selection','Bubble','Counting','Insertion']
 
 def main():
-    for i in sizes:
-        iti = []
-        V = [i for i in range(i)]
-        for j in percentages:
-            V_copy = embaralha(V,len(V),i)
-            result = timeMe(insertion,V,i,10,j)
-            std.append(result[1])
-            iti.append(result[0])     
-        results.append(iti)
-    GraficaSortings(results,[],std)
+    # algorithms = [selection,bubble,insertion,counting]
+    for algorithm in algorithms:
+        avg_result = []
+        std_result = []
+        for i in sizes:
+            avg = []
+            std = []
+            V = [i for i in range(i)]
+            for j in percentages:
+                V_copy = embaralha(V,len(V),i)
+                result = timeMe(algorithm,V,i,10,j)
+                std.append(result[1])
+                avg.append(result[0])     
+
+            avg_result.append(avg)
+            std_result.append(std)
+        print(avg_result)
+        GraficaSortings(sizes,avg_result,std_result)
+
         
 
 main()
