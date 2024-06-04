@@ -17,4 +17,9 @@ def selection(V, n):
 
 \end{python}
 
-Com o código, percebe-se que, mesmo a lista já estando ordenada, o algoritmo continuará realizando os comandos. Assim, ...
+Com o código, percebe-se que, mesmo a lista já estando ordenada, o algoritmo continuará realizando os comandos, ou seja, o número de passagens a ser feita não é mudado devido às condições iniciais de ordenação da lista.
+\subsection*{Quantidade de comparações}
+Nesta subseção, irá ser debatida a quantidade de comparações feitas pelo algoritmo em questão. Como a quantidade de comparações é "constante" neste algoritmo, será "fácil" de analisá-la; nos outros algoritmos, contudo, a análise é mais compléxa devido à oscilação na quantidade de comparações.
+
+Suponha-se que o algoritmo recebeu uma lista com $n$ elementos. Assim, como não há nenhuma restrição nas malhas de repetição a não ser ..., tem-se que, a primeira malha de repetição será executada $n$ vezes e, por consequência, em cada uma dessas execuções, a segunda malha será executada $n-i$ vezes (isto é, na primeira execução, o código contido na segunda malha de repetição será executado $n$ vezes, na segunda, $n-1$, e assim por diante.), O código será executado $n+(n-1)+(n-2)+...+(1)$, ou seja, $\sum_{i=1}^n i = \frac{n(n-1)}{2}$
+%TODO ver depois se está correto
