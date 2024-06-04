@@ -3,3 +3,18 @@ O algoritmo de Seleção é um algoritmo de ordenação no qual, a cada itinera�
 \vspace{\baselineskip}
 
 Acerca do seu desempenho, o algoritmo em questão possui um "desempenho" quadrático, isto é, para $n$ elementops da lista, o algoritmo realizará $\frac{n(n-1)}{2}$ comparações a fim de ordernar totalmente a lista. Uma observação pertinente é que a quantidade de comparações a ser feita independe da porcentagem de ordenação da lista.
+
+A seguir, segue a implementação do código em Python.
+
+\begin{python}
+def selection(V, n):
+    for i in range(0, n):
+        smallest_num_index = i
+        for j in range(i, n):
+            if V[j] < V[smallest_num_index]:
+                smallest_num_index = j
+        V[i], V[smallest_num_index] = V[smallest_num_index], V[i]
+
+\end{python}
+
+Com o código, percebe-se que, mesmo a lista já estando ordenada, o algoritmo continuará realizando os comandos. Assim, ...

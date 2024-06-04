@@ -1,11 +1,17 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage{indentfirst}
+% \usepackage{minted}
+% \usemintedstyle{manni}
+\usepackage{pythonhighlight}
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
+\usepackage{listings}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
+\usepackage{graphicx}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\graphicspath{ {./plots/} }
 \author{João Viktor Souza Almeida}
 \title{Análise de diferentes algoritmos de ordenação}
 
@@ -29,7 +35,7 @@
 O relatório a seguir visa analisar "alguns" algoritmos de ordenação e como suas eficiências mudam dadas diferentes condições iniciais, tais como porcentagem de ordenação e número de elementos da lista a ser ordenada. 
 \
 \section*{Metodologia}
-Na criação do relatório, os testes dos algoritmos foram realizados utilizando a linguagem de programação Python. Durante a execução dos algoritmos, foi utilizada uma máquina com as seguintes configurações:
+Na criação do relatório, os testes dos algoritmos foram realizados utilizando a linguagem de programação Python com a versão 3.10.11. Durante a execução dos algoritmos, foi utilizada uma máquina com as seguintes configurações:
 \begin{itemize}
 \item    Processador (CPU): Ryzen 5 3350G 
 \item Memória (RAM): 16GB DDR4 @ 3200MHz
@@ -42,9 +48,19 @@ Além disso, durante a execução dos algoritmos, foram desabilitados o máximo 
 Para computar a média de execução, foi invocada uma função \textit{timeMe}, na qual eram armazenados os resultados das 10 itinerações do mesmo algoritmo e, no final, retornava a média e o desvio padrão dos resultados.
 
 Para fins simplificatórios, foram ignorados possíveis margens de erros da função que retorna a lista embaralhada. Contudo, essa margem de erro torna-se inotável durante os testes devido ao tamanho das listas utilizadas.
-\\
-\\
-\\
+\subsection{Testes}
+    Para a realização do relatório, foram realizados dois testes. 
+    
+    O primeiro focou em observar os impactos causados pelo tamanho da lista a ser ordenada, ou seja, como o desvio padrão e a média mudam ao aumentar ou diminuir o tamanho da lista a ser ordenada por cada algoritmo. 
+    Para isso, foi criada uma malha de repetição e computados as médias e os devios-padrões de cada algoritmo com listas de tamanhos 1000, 5000, 10000, 50000 e 100000.
+    
+    O segundo, por outro lado, buscou elucidar acerca das mudanças causadas pela taxa de ordenação de uma lista.
+    Para isso, foi estabelecida uma segunda malha de repetição, na qual também foi computada as médias e os devios-padrçoes de cada algoritmo, mas com uma lista de 100000 elementos e com porcentagens de ordenação de 1\%, 3\%, 5\%, 10\% e 50\%.
+    
+
+    Para computar a média, foi criada uma função cujos parâmetros são uma lista e o tamanho desta, respectivamente. O desvio padrão, por outro lado, foi calculado por meio de uma função que recebe os mesmos parâmetros que a função outrora citada.
+    
+
 \noindent\textbf{Palavras-chave:} insertion, bubble, counting, selection, algoritmos, ordenação, análise;
 
 \newpage
@@ -54,11 +70,15 @@ Para fins simplificatórios, foram ignorados possíveis margens de erros da fun�
 \include{insertion.tex}
 \include{count.tex}
 
+\section{Comparações}
+Como supracitado, o algoritmo de bolha e o de inserção variam de acordo com a taxa de ordenação. Assim, em caso de ordenação total, ambos os algoritmos adquirem um comportamento linear.
+\begin{figure}[h]
+    \includegraphics[width=8cm]{second}
+    \caption{Gráfico elucidando o comportamento de cada algoritmo em tópico}
+    \end{figure}
 
 
-
-\section*{Conclusões}
-Os algoritmos em questão, apesar de possuírem diferentes desempenhos dependendo da ordenação da lista, possuem um baixo proveito com listas muito grande. Além disso, é notável que o método importado do Python contém diversos algoritmos, que são usados dependendo do contexto.
-Portanto, a fim de ordenar uma lista com maior rapidez, é notável que a função built-in do Python deve, pelo menos para listas grandes, ser usada em relação aos outros métodos outrora discutidos.
+\section*{Conclusão}
+Os algoritmos em questão, apesar de possuírem diferentes desempenhos dependendo da ordenação da lista, possuem um baixo proveito com listas muito grande. Portanto, a fim de ordenar uma lista com maior rapidez, é notável que a função built-in do Python deve, pelo menos para listas grandes, ser usada em relação aos outros métodos outrora discutidos.
 
 \end{document}

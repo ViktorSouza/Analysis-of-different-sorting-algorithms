@@ -1,3 +1,19 @@
 \section{Algoritmo de inserção}
-O algoritmo de inserção é um cuja caracteristica principal é a asseguração da ordenação da lista a cada 
-O algoritmo de inserção, ao contrário dos outros já comentados, possui uma complexidade que varia dependendo do quão ordenada a lista já se encontra.
+O algoritmo de inserção, assim como o de bolha, varia com a porcentagem de ordenação da lista recebida, ou seja, caso a lista já esteja ordenada, não haverá nada a ser feito. 
+
+
+O algoritmo em questão funcionam da seguinte forma: a lista começa dada como ordenada até que se ache um $j$ tal que $V[j]>V[j+1]$. Caso isso ocorra, o algoritmo trocará os dois valores e comparará, da mesma forma, $V[j-1]$ e $V[j]$. Quando o valor da antiga posição $j$ for menor do que a posição sucessora, garante-se, então, que a lista está ordenada de 0 até $j+1$(ver isto depois). Contudo, caso não exista um $j$, então o algoritmo indica que a lista já está ordenada e, assim, evita mais comparações.
+\\
+
+\begin{python}
+def insertion(V, n):
+last_index = 0
+for i in range(last_index,n - 1):
+    if V[i] > V[i + 1]:
+        j = i
+        while V[j] > V[j + 1]:
+            V[j + 1], V[j] = V[j], V[j + 1]
+            if j <= 0:
+                break
+            j -= 1
+\end{python}

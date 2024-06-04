@@ -33,7 +33,8 @@ random.seed(32)
 import time
 
 mytime = time.perf_counter
-plt.style.use("seaborn-v0_8")
+plt.style.use("ggplot")
+# plt.grid()
 
 def mediaT(V, n):
     values_sum = 0
@@ -131,25 +132,25 @@ def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
     for i in range(len(mediaMCMPi)):
         plt.errorbar(mpontos, mediaMCMPi[i],desvioMCMPi[i],label = algorithms_names[i],fmt='o')
         plt.legend()
-    plt.savefig('./plots/results.png')
-    plt.show()
+    plt.savefig(f'./plots/result_{time.time()}.png')
+    plt.clf()
 
 
 
 
-# sizes = [1000, 5000, 10000, 50000, 100000]
-sizes = [1000,2000,3000,4000,5000,10000]
+
+sizes = [1000, 5000, 10000, 50000, 100000]
+# sizes = [1000,2000,3000,4000,5000]
 percentages = [0.01,0.03,0.05,0.1,0.5]
-# algorithms = [selection,bubble,counting,insertion,sort]
-# algorithms_names = ['Seleção','Bolha','Contagem','Inserção','Padrão']
 algorithms = [selection,bubble,insertion,counting,sort]
 algorithms_names = ['Seleção','Bolha','Inserção','Contagem','Padrão']
 
+#TODO falar sobre o desvio padrão ser alto devido à imprecisão do embaralhar
 def main():
     # Como não há o parâmetro para colocar as legendas em GraficaSortings, teve-se que colocar os nomes e os algoritmos como variáveis globais.
     global algorithms_names
     global algorithms
-    n = 5000
+    n = 100000
     avg_exp_1 = []
     std_exp_1 = []
     avg_exp_2 = []
