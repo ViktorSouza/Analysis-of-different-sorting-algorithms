@@ -5,7 +5,7 @@ O algoritmo de inserção, assim como o de bolha, varia com a porcentagem de ord
 O algoritmo em questão funcionam da seguinte forma: a lista começa dada como ordenada até que se ache um $j$ tal que $V[j]>V[j+1]$. Caso isso ocorra, o algoritmo trocará os dois valores e comparará, da mesma forma, $V[j-1]$ e $V[j]$. Quando o valor da antiga posição $j$ for menor do que a posição sucessora, garante-se, então, que a lista está ordenada de 0 até $j+1$(ver isto depois). Contudo, caso não exista um $j$, então o algoritmo indica que a lista já está ordenada e, assim, evita mais comparações.
 \\
 
-\begin{python}
+\begin{lstlisting}
 def insertion(V, n):
 last_index = 0
 for i in range(last_index,n - 1):
@@ -16,4 +16,4 @@ for i in range(last_index,n - 1):
             if j <= 0:
                 break
             j -= 1
-\end{python}
+\end{lstlisting}

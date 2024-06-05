@@ -120,10 +120,12 @@ def embaralha(V, n, p):
 
 def timeMe(func, V, n, m, p):
     perf = []
+    Vtemp = list(V)
     for _ in range(m):
         start = mytime()
-        func(V, n)
+        func(Vtemp, n)
         end = mytime()
+        Vtemp = list(V)
         perf.append(end - start)
     return (mediaT(perf, len(perf)), varT(perf, len(perf)))
 
@@ -132,7 +134,8 @@ def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
     for i in range(len(mediaMCMPi)):
         plt.errorbar(mpontos, mediaMCMPi[i],desvioMCMPi[i],label = algorithms_names[i],fmt='o')
         plt.legend()
-    plt.savefig(f'./plots/result_{time.time()}.png')
+    # plt.savefig(f'./plots/result_{time.time()}.png')
+    plt.show()
     plt.clf()
 
 
@@ -140,33 +143,35 @@ def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
 
 
 sizes = [1000, 5000, 10000, 50000, 100000]
+n = 100000
+n = 500
 # sizes = [1000,2000,3000,4000,5000]
 percentages = [0.01,0.03,0.05,0.1,0.5]
 algorithms = [selection,bubble,insertion,counting,sort]
-algorithms_names = ['Seleção','Bolha','Inserção','Contagem','Padrão']
+algorithms_names = ['Seleção','Bolha','Inserção','Contagem','Nativo']
 
 #TODO falar sobre o desvio padrão ser alto devido à imprecisão do embaralhar
 def main():
     # Como não há o parâmetro para colocar as legendas em GraficaSortings, teve-se que colocar os nomes e os algoritmos como variáveis globais.
     global algorithms_names
     global algorithms
-    n = 100000
     avg_exp_1 = []
     std_exp_1 = []
     avg_exp_2 = []
     std_exp_2 = []
 
-    # for algorithm in algorithms:
+    #A fim de diminuir possiveis variâncias, foram criadas as listas antes
+    arrays = [[randint(0,9999) for _ in range(i)] for i in sizes]
     for i,algorithm in enumerate(algorithms):
         avg = []
         std = []
-        for size in sizes:
-            Vtmp = list([randint(0,9999) for _ in range(size)])
+        for j,size in enumerate(sizes):
+            Vtmp = list(arrays[j])
 
             media,var = timeMe(func=algorithm,V=Vtmp,n=size,m=10,p=0)
             avg.append(media)
             std.append(var)
-            print(f'Size, {algorithms_names[i]}, {size}')
+            print(f'Size, {algorithms_names[i]}, {size}', {time.time()})
 
         avg_exp_1.append(avg)
         std_exp_1.append(std)
@@ -189,7 +194,7 @@ def main():
             media,var = timeMe(func=algorithm,V=Vtmp,n=len(Vtmp),m=10,p=percent)
             avg.append(media)
             std.append(var)
-            print(f'Percentage, {algorithms_names[i]}, {percent*100}%')
+            print(f'Percentage, {algorithms_names[i]}, {percent*100}%, {time.time()}')
         avg_exp_2.append(avg)
         std_exp_2.append(std)
     plt.ylabel('Tempo')
