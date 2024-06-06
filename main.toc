@@ -1,7 +1,8 @@
 \babel@toc {portuguese}{}\relax 
 \contentsline {subsection}{\numberline {0.1}Testes}{1}{}%
 \contentsline {section}{\numberline {1}Algoritmo de seleção}{4}{}%
-\contentsline {section}{\numberline {2}Algoritmo de bolha}{5}{}%
-\contentsline {section}{\numberline {3}Algoritmo de inserção}{6}{}%
-\contentsline {section}{\numberline {4}Algoritmo de contagem}{7}{}%
-\contentsline {section}{\numberline {5}Comparações}{8}{}%
+\contentsline {section}{\numberline {2}Algoritmo de bolha}{6}{}%
+\contentsline {subsection}{\numberline {2.1}Implementação}{6}{}%
+\contentsline {section}{\numberline {3}Algoritmo de inserção}{8}{}%
+\contentsline {section}{\numberline {4}Algoritmo de contagem}{9}{}%
+\contentsline {section}{\numberline {5}Comparações}{10}{}%

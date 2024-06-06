@@ -7,10 +7,14 @@
 \usepackage{listings}
 
 
+
 \usepackage{xcolor} % for setting colors
 \usepackage[most]{tcolorbox}
 
 
+
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\lstinline{#1}}}
 
 
 \lstset{%
@@ -25,24 +29,27 @@
 \definecolor{backcolour}{rgb}{0.96,0.96,0.98}
 \definecolor{dark}{rgb}{0.3,0.3,0.3}
 
+
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
     rulecolor=\color{backcolour},
     commentstyle=\color{codegreen},
-    framexleftmargin=3mm,
+    framexleftmargin=1pt,
+    numbers=left,
+    xleftmargin=2em,
+    frame=single,
+    framexleftmargin=1.5em,
      framextopmargin=1mm,
      framexbottommargin=1mm,
     keywordstyle=\color{codecyan},
     identifierstyle = \color[rgb]{0.0,0.4,0.4},
-    numberstyle=\tiny\color{codegray},
+    numberstyle=\color{codegray}\ttfamily,
     stringstyle=\color{codecyan},
     basicstyle=\ttfamily\color{dark},
     breakatwhitespace=false,         
     breaklines=true,                 
     captionpos=b,                    
     keepspaces=true,           
-    frame=single,
-    numbers=left,                    
     numbersep=5pt,                  
     showspaces=false,                
     showstringspaces=false,

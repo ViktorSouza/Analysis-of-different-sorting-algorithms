@@ -2,8 +2,26 @@
 O algoritmo de inserção, assim como o de bolha, varia com a porcentagem de ordenação da lista recebida, ou seja, caso a lista já esteja ordenada, não haverá nada a ser feito. 
 
 
-O algoritmo em questão funcionam da seguinte forma: a lista começa dada como ordenada até que se ache um $j$ tal que $V[j]>V[j+1]$. Caso isso ocorra, o algoritmo trocará os dois valores e comparará, da mesma forma, $V[j-1]$ e $V[j]$. Quando o valor da antiga posição $j$ for menor do que a posição sucessora, garante-se, então, que a lista está ordenada de 0 até $j+1$(ver isto depois). Contudo, caso não exista um $j$, então o algoritmo indica que a lista já está ordenada e, assim, evita mais comparações.
+O algoritmo em questão funcionam da seguinte forma: a lista começa dada como ordenada até que se ache um $j$ tal que $V[j]>V[j+1]$, onde $j$ é um inteiro maior que zero e menor do que o tamanho da lista menos um. 
+Caso isso ocorra, o algoritmo trocará os dois valores e comparará, da mesma forma, $V[j-1]$ e $V[j]$. Quando o valor da antiga posição $j$ for menor do que a posição sucessora, garante-se, então, que a lista está ordenada de 0 até $j+1$(ver isto depois). Contudo, caso não exista um $j$, então o algoritmo indica que a lista já está ordenada e, assim, evita mais comparações.
 \\
+
+Logo, tomando uma lista $[4,3,2,1,0]$, caso esta fosse impressa a cada execução do algoritmo, os resultados seriam:
+Destarte, caso fosse impresso a lista a cada modificação, os resultados seriam os seguintes:
+\begin{lstlisting}
+[4, 3, 2, 1, 0]
+[3, 4, 2, 1, 0]
+[3, 2, 4, 1, 0]
+[2, 3, 4, 1, 0]
+[2, 3, 1, 4, 0]
+[2, 1, 3, 4, 0]
+[1, 2, 3, 4, 0]
+[1, 2, 3, 0, 4]
+[1, 2, 0, 3, 4]
+[1, 0, 2, 3, 4]
+\end{lstlisting}
+
+Como pode-se perceber, quando é encontrado um elemento $j$ menor do que o anterior, este é "levado" para trás até que esteja na posição correta
 
 \begin{lstlisting}
 def insertion(V, n):

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.15)  5 JUN 2024 22:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.15)  5 JUN 2024 20:55
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -470,23 +470,23 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count316
 \l__pdf_internal_box=\box79
-) (main.aux (selection.aux) (bubble.aux) (insertion.aux) (count.aux))
+) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
 \c@lstlisting=\count317
  (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -507,28 +507,29 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Underfull \hbox (badness 10000) in paragraph at lines 85--87
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
  []
 
 [1
 
-{C:/Users/Viktor/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [1] [2] (main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
- (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
- (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+{C:/Users/Viktor/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [1] [2]
+No file main.toc.
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [3]
+[3]
 \openout2 = `selection.aux'.
 
  (selection.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8.
  (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -537,20 +538,205 @@ File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ] [5]
 \openout2 = `bubble.aux'.
 
- (bubble.tex [6
+ (bubble.tex
+
+bubble.tex:11: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11     \item
+               $[4,3,2,1,0]$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
+bubble.tex:11: LaTeX Error: Something's wrong--perhaps a missing \item.
 
-])
-Overfull \hbox (24.078pt too wide) in paragraph at lines 46--124
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11     \item $
+                [4,3,2,1,0]$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+bubble.tex:11: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11     \item $
+                [4,3,2,1,0]$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+bubble.tex:11: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11     \item $
+                [4,3,2,1,0]$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 11
+[][]
+ []
+
+bubble.tex:11: Display math should end with $$.
+<to be read again> 
+                   [
+l.11     \item $[
+                 4,3,2,1,0]$
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+bubble.tex:12: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12     \item
+               $[3,2,1,0,4]$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+bubble.tex:12: Missing $ inserted.
+<inserted text> 
+                $
+l.12     \item $
+                [3,2,1,0,4]$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+bubble.tex:12: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12     \item $
+                [3,2,1,0,4]$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 12
+[][]
+ []
+
+
+bubble.tex:13: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13     \item $
+                [2,1,0,3,4]$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 13
+[][]
+ []
+
+
+bubble.tex:14: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14     \item $
+                [1,0,2,3,4]$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 14
+[][]
+ []
+
+
+bubble.tex:15: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15     \item $
+                [0,1,2,3,4]$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 15
+[][]
+ []
+
+
+bubble.tex:16: Undefined control sequence.
+\lstlisting ->\def \lstenv@name 
+                                {lstlisting}\begingroup \lst@setcatcodes \ca...
+l.16 \end{lstlisting}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+bubble.tex:16: Package Listings Error: Extra \endlstlisting.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \end{lstlisting}
+                     
+I'm ignoring this, since I wasn't doing a \def {lstlisting}\begingroup \makeatletter \catcode `\==12\relax \catcode \active =\active \lstlisting@.
+
+
+bubble.tex:16: LaTeX Error: \begin{equation*} on input line 10 ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \end{lstlisting}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+Overfull \hbox (24.078pt too wide) in paragraph at lines 37--120
 \T1/cmr/m/n/10 re-a-li-zará to-das as eta-pas caso a lista já es-teja or-de-nada, pois a va-riá-vel [][][][][][]
  []
 
-[7]
+[6
+
+
+
+] [7]
 \openout2 = `insertion.aux'.
 
  (insertion.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--8
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
@@ -566,32 +752,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--8
 
 
 ]
-<./plots/sizes.png, id=90, 462.528pt x 346.896pt>
+<./plots/sizes.png, id=91, 462.528pt x 346.896pt>
 File: ./plots/sizes.png Graphic file (type png)
 <use ./plots/sizes.png>
-Package pdftex.def Info: ./plots/sizes.png  used on input line 132.
+Package pdftex.def Info: ./plots/sizes.png  used on input line 128.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
  [10
 
 
- <./plots/sizes.png>] (main.aux (selection.aux) (bubble.aux) (insertion.aux) (count.aux))
+ <./plots/sizes.png>]
+
+c:/Users/Viktor/Desktop/Programming/University/EP1 - Introduction to Computation/EP1 - Introduction to Computation/main.tex:137: LaTeX Error: \begin{[} on input line 10 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.137 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(main.aux (selection.aux) (bubble.aux) (insertion.aux) (count.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 10 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 22208 strings out of 474370
- 477327 string characters out of 5740063
- 2117754 words of memory out of 5000000
- 44209 multiletter control sequences out of 15000+600000
- 566502 words of font info for 54 fonts, out of 8000000 for 9000
+ 22193 strings out of 474370
+ 476572 string characters out of 5740063
+ 2071754 words of memory out of 5000000
+ 44203 multiletter control sequences out of 15000+600000
+ 567268 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,9n,107p,802b,1662s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (12 pages, 211697 bytes).
+ 101i,9n,107p,802b,1259s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (12 pages, 200957 bytes).
 PDF statistics:
- 436 PDF objects out of 1000 (max. 8388607)
+ 415 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  162 words of extra memory for PDF output out of 10000 (max. 10000000)
 

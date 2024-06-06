@@ -1,10 +1,30 @@
 \section{Algoritmo de bolha}
 O algoritmo de bolha é um algoritmo cuja complexidade é, assim como o anterior, quadrática. Sua principal característica é que, na n-ésima passagem pela lista, o algoritmo assegura estarem ordenados os n últimos elementos da lista.
 
-\textbf{Exemplo}: Seja $M$ uma lista [4,3,2,1,0].
+\subsubsection*{Exemplo}
+Seja $M$ uma lista [4,3,2,1,0].
 Na primeira passagem, o maior valor da lista (4) estará em seu lugar correto, ou seja, M será [3,2,1,0,4]. Na segunda passagem, o segundo maior elemento também estará posicionado em sua posição correta; assim, M será [2,1,0,3,4].
-
 O algoritmo continuará realizando "isto" até que, na 5º passagem, (pois a lista possui 5 elementos), a lista estará totalmente ordenada.
+
+Destarte, seguem as impressões da lista a cada modificação realizada. 
+
+\begin{lstlisting}
+[4, 3, 2, 1, 0]
+[3, 4, 2, 1, 0]
+[3, 2, 4, 1, 0]
+[3, 2, 1, 4, 0]
+[3, 2, 1, 0, 4]
+[2, 3, 1, 0, 4]
+[2, 1, 3, 0, 4]
+[2, 1, 0, 3, 4]
+[1, 2, 0, 3, 4]
+[1, 0, 2, 3, 4]
+\end{lstlisting}
+
+Perceptivelmente, o maior elemento é, a cada modificação, levado uma posição para a direita, até que o elemento esteja na posição correta. De fato, o nome do algoritmo faz referência às bolhas em bebidas, uma vez que as bolhas maiores sobem mais rapidamente do que as menores.
+
+\subsection{Implementação}
+Segue, a seguir, o código utilizado na implementação do algoritmo em questão em Python:
 
 \begin{lstlisting}
 def bubble(V, n):
@@ -20,4 +40,7 @@ def bubble(V, n):
         lim -= 1
 \end{lstlisting}
 
-De acordo com o código, constata-se que, ao contrário do algoritmo anterior, este não realizará todas as etapas caso a lista já esteja ordenada, pois a variável $isIncreasing$ indica se a lista já se encontra ou não ordenada.
+
+Perceptivelmente, caso a lista já esteja ordenada, na primeira execução da malha de repetição, o \code{isIncreasing} continuará com o valor \code{True} e, portanto, o comando \code{break} será executado, parando, assim, a ordenação.
+
+Constata-se, dessa forma, que, ao contrário do algoritmo anterior, este não realizará todas as etapas caso a lista já esteja ordenada, pois a variável \code{isIncreasing} funciona como um "testador".

@@ -106,7 +106,10 @@ def insertion(V, n):
                 if j <= 0:
                     break
                 j -= 1
+
+
 def sort(V,n):
+    #Native Python algorithm
     V.sort()
 
 
@@ -134,8 +137,8 @@ def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
     for i in range(len(mediaMCMPi)):
         plt.errorbar(mpontos, mediaMCMPi[i],desvioMCMPi[i],label = algorithms_names[i],fmt='o')
         plt.legend()
-    # plt.savefig(f'./plots/result_{time.time()}.png')
-    plt.show()
+    plt.savefig(f'./plots/result_{time.time()}.png')
+    # plt.show()
     plt.clf()
 
 
@@ -144,13 +147,12 @@ def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
 
 sizes = [1000, 5000, 10000, 50000, 100000]
 n = 100000
-n = 500
-# sizes = [1000,2000,3000,4000,5000]
+# n = 500
+# sizes = [100,200,300,400,500]
 percentages = [0.01,0.03,0.05,0.1,0.5]
 algorithms = [selection,bubble,insertion,counting,sort]
 algorithms_names = ['Seleção','Bolha','Inserção','Contagem','Nativo']
 
-#TODO falar sobre o desvio padrão ser alto devido à imprecisão do embaralhar
 def main():
     # Como não há o parâmetro para colocar as legendas em GraficaSortings, teve-se que colocar os nomes e os algoritmos como variáveis globais.
     global algorithms_names
