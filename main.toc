@@ -5,4 +5,6 @@
 \contentsline {subsection}{\numberline {2.1}Implementação}{6}{}%
 \contentsline {section}{\numberline {3}Algoritmo de inserção}{8}{}%
 \contentsline {section}{\numberline {4}Algoritmo de contagem}{9}{}%
-\contentsline {section}{\numberline {5}Comparações}{10}{}%
+\contentsline {section}{\numberline {5}Resultados}{10}{}%
+\contentsline {subsection}{\numberline {5.1}Ordenação prévia}{10}{}%
+\contentsline {section}{\numberline {6}Conclusão}{12}{}%

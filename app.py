@@ -178,7 +178,7 @@ def main():
         avg_exp_1.append(avg)
         std_exp_1.append(std)
         
-    plt.ylabel('Tempo')
+    plt.ylabel('Tempo (s)')
     plt.xlabel("Quantidade de elementos")
     GraficaSortings(sizes,avg_exp_1,std_exp_1)
 

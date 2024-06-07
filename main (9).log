@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.15)  6 JUN 2024 21:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.15)  6 JUN 2024 20:35
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -470,7 +470,7 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count316
 \l__pdf_internal_box=\box79
-) (main.aux (selection.aux) (bubble.aux) (insertion.aux) (count.aux) (results.aux) (conclusion.aux))
+) (main.aux (selection.aux) (bubble.aux) (insertion.aux) (count.aux) (results.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
@@ -541,17 +541,12 @@ File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 
 
 
-]
-Overfull \hbox (24.078pt too wide) in paragraph at lines 46--47
+])
+Overfull \hbox (24.078pt too wide) in paragraph at lines 46--124
 \T1/cmr/m/n/10 re-a-li-zará to-das as eta-pas caso a lista já es-teja or-de-nada, pois a va-riá-vel [][][][][][]
  []
 
-
-Package amsmath Warning: Foreign command \over;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 53.
-
-) [7]
+[7]
 \openout2 = `insertion.aux'.
 
  (insertion.tex
@@ -577,46 +572,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--8
 <./plots/sizes.png, id=90, 462.528pt x 346.896pt>
 File: ./plots/sizes.png Graphic file (type png)
 <use ./plots/sizes.png>
-Package pdftex.def Info: ./plots/sizes.png  used on input line 7.
+Package pdftex.def Info: ./plots/sizes.png  used on input line 5.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
-<./plots/result_1717713581.4751563.png, id=92, 462.528pt x 346.896pt>
-File: ./plots/result_1717713581.4751563.png Graphic file (type png)
-<use ./plots/result_1717713581.4751563.png>
-Package pdftex.def Info: ./plots/result_1717713581.4751563.png  used on input line 13.
-(pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 ) [10
 
 
 
- <./plots/sizes.png>] [11 <./plots/result_1717713581.4751563.png>]
-\openout2 = `conclusion.aux'.
-
- (conclusion.tex) [12
+ <./plots/sizes.png>] [11
 
 
-
-] (main.aux (selection.aux) (bubble.aux) (insertion.aux) (count.aux) (results.aux) (conclusion.aux))
+] (main.aux (selection.aux) (bubble.aux) (insertion.aux) (count.aux) (results.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22268 strings out of 474370
- 479566 string characters out of 5740063
+ 22233 strings out of 474370
+ 478213 string characters out of 5740063
  2117754 words of memory out of 5000000
- 44255 multiletter control sequences out of 15000+600000
+ 44227 multiletter control sequences out of 15000+600000
  566502 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,9n,107p,802b,1664s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (14 pages, 237959 bytes).
+Output written on main.pdf (13 pages, 214905 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
+ 441 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 

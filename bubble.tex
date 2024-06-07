@@ -44,3 +44,14 @@ def bubble(V, n):
 Perceptivelmente, caso a lista já esteja ordenada, na primeira execução da malha de repetição, o \code{isIncreasing} continuará com o valor \code{True} e, portanto, o comando \code{break} será executado, parando, assim, a ordenação.
 
 Constata-se, dessa forma, que, ao contrário do algoritmo anterior, este não realizará todas as etapas caso a lista já esteja ordenada, pois a variável \code{isIncreasing} funciona como um "testador".
+
+\subsection*{Quantidade de comparações}
+Como a quantidade de comparações realizadas pelo bolha depende da lista, analisar-se-ão os casos. 
+
+Caso a lista com $n$ elementos já esteja 100\% ordenada, o algoritmo detectará "isto" na primeira passagem, pois a variável \code{isIncrease} continuará com o seu valor booleano verdadeiro após a malha de repetição mostrada na implementação, ou seja, serão realizadas $n$ comparações.
+
+Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$
+%TODO dissertar mais
+
+Finalmente, nos outros casos, a análise é mais complexa e depende de outros fatores que não estão no escopo da análise. Contudo, em casos nos quais a lista não está nem ordenada nem totalmente desordenada, o algoritmo possui um comportamento quadrático.
+%TODO citar fonte
