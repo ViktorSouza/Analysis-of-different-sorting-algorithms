@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.15)  6 JUN 2024 21:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.15)  8 JUN 2024 18:17
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -25,6 +25,9 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \bibindent=\dimen140
 ) (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+) (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
@@ -370,7 +373,7 @@ LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
 \c@MaxMatrixCols=\count306
-\dotsspace@=\muskip16
+\dotsspace@=\muskip17
 \c@parentequation=\count307
 \dspbrk@lvl=\count308
 \tag@help=\toks35
@@ -473,20 +476,20 @@ File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
 ) (main.aux (selection.aux) (bubble.aux) (insertion.aux) (count.aux) (results.aux) (conclusion.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
 \c@lstlisting=\count317
  (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -507,7 +510,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Underfull \hbox (badness 10000) in paragraph at lines 85--87
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
 
@@ -542,61 +545,89 @@ File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 
 
 ]
-Overfull \hbox (24.078pt too wide) in paragraph at lines 46--47
+Overfull \hbox (24.078pt too wide) in paragraph at lines 47--48
 \T1/cmr/m/n/10 re-a-li-zará to-das as eta-pas caso a lista já es-teja or-de-nada, pois a va-riá-vel [][][][][][]
  []
 
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 53.
+(amsmath)                 on input line 54.
 
 ) [7]
 \openout2 = `insertion.aux'.
 
  (insertion.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--8
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
-) [8
+[8
 
 
 
 ]
+Overfull \hbox (26.60516pt too wide) in paragraph at lines 49--50
+\T1/cmr/m/n/10 meira iti-ne-ra-ção de-vido à per-ma-nên-cia do va-lor ver-da-deiro da va-riá-vel [][][][][][],
+ []
+
+) [9]
 \openout2 = `count.aux'.
 
- (count.tex) [9
+ (count.tex) [10
 
 
 
-]
+] [11]
 \openout2 = `results.aux'.
 
  (results.tex
-<./plots/sizes.png, id=90, 462.528pt x 346.896pt>
+<./plots/sizes.png, id=97, 462.528pt x 346.896pt>
 File: ./plots/sizes.png Graphic file (type png)
 <use ./plots/sizes.png>
-Package pdftex.def Info: ./plots/sizes.png  used on input line 7.
+Package pdftex.def Info: ./plots/sizes.png  used on input line 11.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
-<./plots/result_1717713581.4751563.png, id=92, 462.528pt x 346.896pt>
-File: ./plots/result_1717713581.4751563.png Graphic file (type png)
-<use ./plots/result_1717713581.4751563.png>
-Package pdftex.def Info: ./plots/result_1717713581.4751563.png  used on input line 13.
+<./plots/result_1717775798.8843806.png, id=99, 462.528pt x 346.896pt>
+File: ./plots/result_1717775798.8843806.png Graphic file (type png)
+<use ./plots/result_1717775798.8843806.png>
+Package pdftex.def Info: ./plots/result_1717775798.8843806.png  used on input line 17.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [10
+) [12
 
 
 
- <./plots/sizes.png>] [11 <./plots/result_1717713581.4751563.png>]
+ <./plots/sizes.png>] [13 <./plots/result_1717775798.8843806.png>]
 \openout2 = `conclusion.aux'.
 
- (conclusion.tex) [12
+ (conclusion.tex) [14
 
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+[]\T1/cmr/m/n/10 Bubble Sort Time Com-ple-xity and Al-go-rithm Ex-plai-ned, buil-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+\T1/cmr/m/n/10 tin, 2023. Dis-po-ní-vel em: $\T1/cmtt/m/n/10 https : / / builtin . com / data-[]science /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+\T1/cmtt/m/n/10 bubble-[]sort-[]time-[]complexity# : ~ : text = The % 20bubble % 20sort %
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+\T1/cmtt/m/n/10 20algorithm % 27s % 20average ,[] complexity % 3A % 20O(n % C2 % B2)$\T1/cmr/m/n/10 . Acesso
+ []
+
+[15
 
 
 ] (main.aux (selection.aux) (bubble.aux) (insertion.aux) (count.aux) (results.aux) (conclusion.aux))
@@ -606,17 +637,17 @@ L3 programming layer <2024-04-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22268 strings out of 474370
- 479566 string characters out of 5740063
- 2117754 words of memory out of 5000000
- 44255 multiletter control sequences out of 15000+600000
+ 22360 strings out of 474370
+ 480946 string characters out of 5740063
+ 2088754 words of memory out of 5000000
+ 44343 multiletter control sequences out of 15000+600000
  566502 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,9n,107p,802b,1664s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,9n,107p,802b,1235s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (14 pages, 237959 bytes).
+Output written on main.pdf (17 pages, 251197 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
+ 477 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -27,6 +27,7 @@
 
 import matplotlib.pyplot as plt
 import random
+from multiprocessing import Process
 from random import randint
 from sys import platform
 random.seed(32)
@@ -48,8 +49,8 @@ def varT(V, n):
     std = 0
     for num in V:
         std += (num - avg) ** 2
-    std = std / n
-    std = std ** (1 / 2)
+    std = std / (n-1)
+    # std = std ** (1 / 2)
     return std
 
 
@@ -138,6 +139,7 @@ def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
         plt.errorbar(mpontos, mediaMCMPi[i],desvioMCMPi[i],label = algorithms_names[i],fmt='o')
         plt.legend()
     plt.savefig(f'./plots/result_{time.time()}.png')
+
     # plt.show()
     plt.clf()
 
@@ -147,11 +149,13 @@ def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
 
 sizes = [1000, 5000, 10000, 50000, 100000]
 n = 100000
-# n = 500
 # sizes = [100,200,300,400,500]
+# n = 500
 percentages = [0.01,0.03,0.05,0.1,0.5]
 algorithms = [selection,bubble,insertion,counting,sort]
 algorithms_names = ['Seleção','Bolha','Inserção','Contagem','Nativo']
+
+
 
 def main():
     # Como não há o parâmetro para colocar as legendas em GraficaSortings, teve-se que colocar os nomes e os algoritmos como variáveis globais.
@@ -162,6 +166,20 @@ def main():
     avg_exp_2 = []
     std_exp_2 = []
 
+    # first_test(avg_exp_1,std_exp_1)
+    # second_test(avg_exp_2,std_exp_2)
+
+    p1 = Process(target=first_test,args =(avg_exp_1,std_exp_1))
+    p1.start()
+    p2 = Process(target=second_test,args =(avg_exp_2,std_exp_2))
+    p2.start()
+    p1.join()
+    p2.join()
+
+
+
+        
+def first_test(avg_exp_1,std_exp_1):
     #A fim de diminuir possiveis variâncias, foram criadas as listas antes
     arrays = [[randint(0,9999) for _ in range(i)] for i in sizes]
     for i,algorithm in enumerate(algorithms):
@@ -182,10 +200,9 @@ def main():
     plt.xlabel("Quantidade de elementos")
     GraficaSortings(sizes,avg_exp_1,std_exp_1)
 
-
+def second_test(avg_exp_2,std_exp_2):
     algorithms = [bubble,insertion]
     algorithms_names = ['Bolha','Inserção']
-    # for algorithm in algorithms:
     for i,algorithm in enumerate(algorithms):
         avg = []
         std = []
@@ -199,10 +216,8 @@ def main():
             print(f'Percentage, {algorithms_names[i]}, {percent*100}%, {time.time()}')
         avg_exp_2.append(avg)
         std_exp_2.append(std)
-    plt.ylabel('Tempo')
+    plt.ylabel('Tempo (s)')
     plt.xlabel("Porcentagem de embaralhamento")
     GraficaSortings(percentages,avg_exp_2,std_exp_2)
-
-        
-
-main()
+if __name__ == '__main__':
+    main()

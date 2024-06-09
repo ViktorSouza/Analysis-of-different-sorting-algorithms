@@ -17,3 +17,22 @@ Segue, a seguir, os valores de \code{V} a cada modificação:
 
 Notoriamente, a lista, durante as mudanças intermediárias, não possui todos os valores iniciais, isto é, alguns dos elementos (como o 4) deixam de existir em alguma etapa e voltam a aparecer somente depois. Esta conduta é explicada pela diferença em que o código é executado: 
 %TODO dizer que é criado um histograma e tudo mais.
+
+\subsection*{Implementação}
+Segue a implementação em Python
+
+\begin{lstlisting}
+def counting(V, n):
+    max_element = max(V)
+    hist_list = [0 for _ in range(max_element + 1)]
+    for i in range(max_element + 1):
+        hist_list[i] = count_element_in_array(i, V)
+    index = 0
+    for i in range(max_element + 1):
+        for _ in range(hist_list[i]):
+            V[index] = i
+            index += 1
+\end{lstlisting}
+Como pode-se perceber, o algoritmo de contagem, assim como os outros, possui duas malhas de repetição. Contudo, em vez da segunda estar dentro da terceira, uma ocorre após a outra.
+Apesar disso, uma singularidade desse algoritmo é que, ao contrário dos outros, a quantidade de itinerações na primeira malha de repetição depende do tamanho do maior elemento (pensando apenas na implementação com números positivos), tornando-o eficaz para listas grandes mas com elementos menores.
+Adicionalmente, este algoritmo não ordena os elementos por comparação...

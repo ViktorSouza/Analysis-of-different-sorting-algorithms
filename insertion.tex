@@ -1,13 +1,15 @@
 \section{Algoritmo de inserção}
-O algoritmo de inserção, assim como o de bolha, varia com a porcentagem de ordenação da lista recebida, ou seja, caso a lista já esteja ordenada, não haverá nada a ser feito. 
+O algoritmo de inserção, pussui como principal característica, a asseguração de que, a cada itineração $n$, os n-ésimos primeiros elementos estarão ordenados. Além disso, assim como o de bolha, este varia com a porcentagem de ordenação da lista recebida, ou seja, caso a lista já esteja ordenada, será detectado logo na primeira passagem e, assim, não haverá nada a ser feito. 
 
+
+\subsection*{Exemplo}
+Seja, para fins de exemplificação, $V$ uma lista $[4,3,2,1,0]$.  
 
 O algoritmo em questão funcionam da seguinte forma: a lista começa dada como ordenada até que se ache um $j$ tal que $V[j]>V[j+1]$, onde $j$ é um inteiro maior que zero e menor do que o tamanho da lista menos um. 
 Caso isso ocorra, o algoritmo trocará os dois valores e comparará, da mesma forma, $V[j-1]$ e $V[j]$. Quando o valor da antiga posição $j$ for menor do que a posição sucessora, garante-se, então, que a lista está ordenada de 0 até $j+1$(ver isto depois). Contudo, caso não exista um $j$, então o algoritmo indica que a lista já está ordenada e, assim, evita mais comparações.
 \\
 
-Logo, tomando uma lista $[4,3,2,1,0]$, caso esta fosse impressa a cada execução do algoritmo, os resultados seriam:
-Destarte, caso fosse impresso a lista a cada modificação, os resultados seriam os seguintes:
+Logo, tomando a lista $M$, caso esta fosse impressa a cada modificação, os resultados seriam:
 \begin{lstlisting}
 [4, 3, 2, 1, 0]
 [3, 4, 2, 1, 0]
@@ -19,8 +21,13 @@ Destarte, caso fosse impresso a lista a cada modificação, os resultados seriam
 [1, 2, 3, 0, 4]
 [1, 2, 0, 3, 4]
 [1, 0, 2, 3, 4]
+[0, 1, 2, 3, 4]
 \end{lstlisting}
 
+Visivelmente, observa-se que, sempre que é encontrado um elemento $e$ menor que o anterior, ambos são trocados e, em seguida, o algoritmo começa a verificar e mover $e$ para trás até o elemento em questão fique em sua posição correta.
+\newpage
+
+\subsection*{Implementação}
 Como pode-se perceber, quando é encontrado um elemento $j$ menor do que o anterior, este é "levado" para trás até que esteja na posição correta
 
 \begin{lstlisting}
@@ -35,3 +42,13 @@ for i in range(last_index,n - 1):
                 break
             j -= 1
 \end{lstlisting}
+
+\subsection*{Quantidade de comparações}
+Tendo em vista que as comparações realizadas depende da lista, os casos serão analisados. 
+
+Caso a lista com $n$ elementos esteja em ordem, o algoritmo detectará na primeira itineração devido à permanência do valor verdadeiro da variável \code{isIncreasing}, ou seja, serão realizadas $n$ comparações.
+
+Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$. A prova é análoga à do bolha.
+
+Finalmente, nos outros casos, a análise é, assim como no algoritmo anterior, compléxa. Contudo, em cenários nos quais a lista não se enquadra nos casos supracitados, o algoritmo possui um comportamento quadrático.
+%TODO citar fonte

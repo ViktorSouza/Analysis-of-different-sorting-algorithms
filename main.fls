@@ -9,6 +9,8 @@ INPUT C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
 INPUT C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
+INPUT C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
 INPUT C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
 INPUT C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
 INPUT C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
@@ -320,12 +322,12 @@ INPUT .\plots\sizes.png
 INPUT .\plots\sizes.png
 INPUT .\plots\sizes.png
 INPUT .\plots\sizes.png
-INPUT .\plots\result_1717713581.4751563.png
-INPUT .\plots\result_1717713581.4751563.png
-INPUT .\plots\result_1717713581.4751563.png
-INPUT .\plots\result_1717713581.4751563.png
-INPUT .\plots\result_1717713581.4751563.png
-INPUT .\plots\result_1717713581.4751563.png
+INPUT .\plots\result_1717775798.8843806.png
+INPUT .\plots\result_1717775798.8843806.png
+INPUT .\plots\result_1717775798.8843806.png
+INPUT .\plots\result_1717775798.8843806.png
+INPUT .\plots\result_1717775798.8843806.png
+INPUT .\plots\result_1717775798.8843806.png
 INPUT .\conclusion.tex
 OUTPUT conclusion.aux
 INPUT .\conclusion.tex
