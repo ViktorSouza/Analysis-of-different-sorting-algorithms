@@ -2,7 +2,7 @@
 O algoritmo de inserção, pussui como principal característica, a asseguração de que, a cada itineração $n$, os n-ésimos primeiros elementos estarão ordenados. Além disso, assim como o de bolha, este varia com a porcentagem de ordenação da lista recebida, ou seja, caso a lista já esteja ordenada, será detectado logo na primeira passagem e, assim, não haverá nada a ser feito. 
 
 
-\subsection*{Exemplo}
+\subsection{Exemplo}
 Seja, para fins de exemplificação, $V$ uma lista $[4,3,2,1,0]$.  
 
 O algoritmo em questão funcionam da seguinte forma: a lista começa dada como ordenada até que se ache um $j$ tal que $V[j]>V[j+1]$, onde $j$ é um inteiro maior que zero e menor do que o tamanho da lista menos um. 
@@ -27,7 +27,7 @@ Logo, tomando a lista $M$, caso esta fosse impressa a cada modificação, os res
 Visivelmente, observa-se que, sempre que é encontrado um elemento $e$ menor que o anterior, ambos são trocados e, em seguida, o algoritmo começa a verificar e mover $e$ para trás até o elemento em questão fique em sua posição correta.
 \newpage
 
-\subsection*{Implementação}
+\subsection{Implementação}
 Como pode-se perceber, quando é encontrado um elemento $j$ menor do que o anterior, este é "levado" para trás até que esteja na posição correta
 
 \begin{lstlisting}
@@ -43,7 +43,7 @@ for i in range(last_index,n - 1):
             j -= 1
 \end{lstlisting}
 
-\subsection*{Quantidade de comparações}
+\subsection{Quantidade de comparações}
 Tendo em vista que as comparações realizadas depende da lista, os casos serão analisados. 
 
 Caso a lista com $n$ elementos esteja em ordem, o algoritmo detectará na primeira itineração devido à permanência do valor verdadeiro da variável \code{isIncreasing}, ou seja, serão realizadas $n$ comparações.

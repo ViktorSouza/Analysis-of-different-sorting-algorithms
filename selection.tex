@@ -3,7 +3,7 @@ O algoritmo de Seleção é um algoritmo de ordenação no qual, a cada itinera�
 
 Acerca do seu desempenho, o algoritmo em questão possui um "desempenho" quadrático, isto é, para $n$ elementops da lista, o algoritmo realizará $\frac{n(n+1)}{2}$ comparações a fim de ordernar totalmente a lista. Uma observação pertinente é que a quantidade de comparações a ser feita independe da porcentagem de ordenação da lista.
 
-\subsection*{Exemplo}
+\subsection{Exemplo}
 Seja M uma lista \code{[4,3,2,1,0]}. Na primeira passagem, o algoritmo detectará o menor elemento da lista e, logo após, irá permutá-lo com o primeiro elemento da lista, ou seja, o elemento 4 e 0 serão trocados de lugar. Na segunda passagem, começando pelo segundo elemento, a segunda malha de repetição irá detectar o segundo menor elemento e, similarmente, irá permutá-lo com o segundo elento da lista. Nas próximas execuções, a forma é análoga.
 
 Na n-ésima passagem, onde $n$ é o tamanho da lista, todos os elementos estarão em ordem crescente e, portanto, ordenados.
@@ -22,7 +22,7 @@ Assim, seguem as impressões da lista a cada modificação.
 Percebe-se que, mesmo a lista já estando ordenada, o algoritmo continuará realizando os comandos, ou seja, o número de passagens a ser feita não é mudado devido às condições iniciais de ordenação.
 
 \newpage
-\subsection*{Implementação}
+\subsection{Implementação}
 A seguir, segue a implementação do código em Python.
 
 \begin{lstlisting}
@@ -36,7 +36,7 @@ def selection(V, n):
 
 \end{lstlisting}
 
-\subsection*{Quantidade de comparações}
+\subsection{Quantidade de comparações}
 Nesta subseção, irá ser debatida a quantidade de comparações feitas pelo algoritmo em questão. Como a quantidade de comparações é "constante" neste algoritmo, será "fácil" de analisá-la; nos outros algoritmos, contudo, a análise é mais compléxa devido à oscilação na quantidade de comparações.
 
 Suponha-se que o algoritmo recebeu uma lista com $n$ elementos. Assim, como não há um dispositivo que pare o código antes, tem-se que, a primeira malha de repetição será executada $n$ vezes, em que a primeira $i=1$, na segunda, $i=2$ e assim por diante. Por consequência, em cada uma dessas execuções, a segunda malha será executada $n-i$ vezes (isto é, na primeira execução, o código contido na segunda malha de repetição será executado $n$ vezes, na segunda, $n-1$, nas seguntes a lógica é análoga.). Dessa forma, o código será executado $n+(n-1)+(n-2)+...+(1)$, ou seja, $\sum_{i=1}^n i = \frac{n(n+1)}{2}$

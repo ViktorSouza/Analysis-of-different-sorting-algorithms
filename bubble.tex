@@ -1,7 +1,7 @@
 \section{Algoritmo de bolha}
 O algoritmo de bolha é um algoritmo cuja complexidade é, assim como o anterior, quadrática. Sua principal característica é que, na n-ésima passagem pela lista, o algoritmo assegura estarem ordenados os n últimos elementos da lista.
 
-\subsubsection*{Exemplo}
+\subsection{Exemplo}
 Seja $M$ uma lista [4,3,2,1,0].
 Na primeira passagem, o maior valor da lista (4) estará em seu lugar correto, ou seja, M será [3,2,1,0,4]. Na segunda passagem, o segundo maior elemento também estará posicionado em sua posição correta; assim, M será [2,1,0,3,4].
 O algoritmo continuará realizando "isto" até que, na 5º passagem, (pois a lista possui 5 elementos), a lista estará totalmente ordenada.
@@ -46,7 +46,7 @@ Perceptivelmente, caso a lista já esteja ordenada, na primeira execução da ma
 
 Constata-se, dessa forma, que, ao contrário do algoritmo anterior, este não realizará todas as etapas caso a lista já esteja ordenada, pois a variável \code{isIncreasing} funciona como um "testador".
 
-\subsection*{Quantidade de comparações}
+\subsection{Quantidade de comparações}
 Como a quantidade de comparações realizadas pelo bolha depende da lista, analisar-se-ão os casos. 
 
 Caso a lista com $n$ elementos já esteja 100\% ordenada, o algoritmo detectará "isto" na primeira passagem, pois a variável \code{isIncrease} continuará com o seu valor booleano verdadeiro após a malha de repetição mostrada na implementação, ou seja, serão realizadas $n$ comparações.

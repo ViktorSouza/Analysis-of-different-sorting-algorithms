@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.15)  8 JUN 2024 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.15)  9 JUN 2024 11:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Viktor/Desktop/Programming/University/EP1 - Introduction to Computation/EP1 - Introduction to Computation/main.tex"
-(c:/Users/Viktor/Desktop/Programming/University/EP1 - Introduction to Computation/EP1 - Introduction to Computation/main.tex
+**"c:/Users/Viktor/Desktop/University/EP1 - Introduction to Computation/EP1 - Introduction to Computation/main.tex"
+(c:/Users/Viktor/Desktop/University/EP1 - Introduction to Computation/EP1 - Introduction to Computation/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
 (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -473,7 +473,7 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count316
 \l__pdf_internal_box=\box79
-) (main.aux (selection.aux) (bubble.aux) (insertion.aux) (count.aux) (results.aux) (conclusion.aux))
+) (main.aux (selection.aux) (bubble.aux) (insertion.aux) (counting.aux) (results.aux) (conclusion.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
@@ -517,11 +517,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--88
 [1
 
 {C:/Users/Viktor/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [1] [2] (main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (C:\Users\Viktor\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
@@ -572,13 +572,13 @@ Overfull \hbox (26.60516pt too wide) in paragraph at lines 49--50
  []
 
 ) [9]
-\openout2 = `count.aux'.
+\openout2 = `counting.aux'.
 
- (count.tex) [10
+ (counting.tex [10
 
 
 
-] [11]
+]) [11]
 \openout2 = `results.aux'.
 
  (results.tex
@@ -608,46 +608,46 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 []\T1/cmr/m/n/10 Bubble Sort Time Com-ple-xity and Al-go-rithm Ex-plai-ned, buil-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 \T1/cmr/m/n/10 tin, 2023. Dis-po-ní-vel em: $\T1/cmtt/m/n/10 https : / / builtin . com / data-[]science /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 \T1/cmtt/m/n/10 bubble-[]sort-[]time-[]complexity# : ~ : text = The % 20bubble % 20sort %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 \T1/cmtt/m/n/10 20algorithm % 27s % 20average ,[] complexity % 3A % 20O(n % C2 % B2)$\T1/cmr/m/n/10 . Acesso
  []
 
 [15
 
 
-] (main.aux (selection.aux) (bubble.aux) (insertion.aux) (count.aux) (results.aux) (conclusion.aux))
+] (main.aux (selection.aux) (bubble.aux) (insertion.aux) (counting.aux) (results.aux) (conclusion.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22360 strings out of 474370
- 480946 string characters out of 5740063
- 2088754 words of memory out of 5000000
- 44343 multiletter control sequences out of 15000+600000
+ 22364 strings out of 474370
+ 480784 string characters out of 5740063
+ 2110754 words of memory out of 5000000
+ 44346 multiletter control sequences out of 15000+600000
  566502 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,9n,107p,802b,1235s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,9n,107p,790b,1652s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\Viktor\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Viktor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (17 pages, 251197 bytes).
+Output written on main.pdf (17 pages, 253571 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
+ 475 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 
