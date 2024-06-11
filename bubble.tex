@@ -1,10 +1,13 @@
 \section{Algoritmo de bolha}
 O algoritmo de bolha é um algoritmo cuja complexidade é, assim como o anterior, quadrática. Sua principal característica é que, na n-ésima passagem pela lista, o algoritmo assegura estarem ordenados os n últimos elementos da lista.
+Um fato interessante é que o nome do algoritmo faz referência às bolhas em bebidas, uma vez que as bolhas maiores sobem mais rapidamente do que as menores.
+
 
 \subsection{Exemplo}
 Seja $M$ uma lista [4,3,2,1,0].
-Na primeira passagem, o maior valor da lista (4) estará em seu lugar correto, ou seja, M será [3,2,1,0,4]. Na segunda passagem, o segundo maior elemento também estará posicionado em sua posição correta; assim, M será [2,1,0,3,4].
-O algoritmo continuará realizando "isto" até que, na 5º passagem, (pois a lista possui 5 elementos), a lista estará totalmente ordenada.
+Na primeira passagem da primeira malha de repetição, será detectado que os elementos 4 e 3 estão em posições erradas e, assim serão trocados, deixando a lista como [3,4,2,1,0]. Novamente, será detectado que os elementos 4 e 2 estão trocados e, assim cmomo no primeio passo, 
+
+O algoritmo continuará realizando esses passos, isto é, trocar o elemento $j$ com o $j+1$ se o primeiro for maior que o segundo, até que, na 5º passagem, (pois a lista possui 5 elementos), a lista estará totalmente ordenada.
 
 Destarte, seguem as impressões da lista a cada modificação realizada. 
 
@@ -19,10 +22,11 @@ Destarte, seguem as impressões da lista a cada modificação realizada.
 [2, 1, 0, 3, 4]
 [1, 2, 0, 3, 4]
 [1, 0, 2, 3, 4]
+[0, 1, 2, 3, 4]
 \end{lstlisting}
+%TODO adicionar, de fato, todas as mudanças
 
-Perceptivelmente, o maior elemento é, a cada modificação, levado uma posição para a direita, até que o elemento esteja na posição correta. De fato, o nome do algoritmo faz referência às bolhas em bebidas, uma vez que as bolhas maiores sobem mais rapidamente do que as menores.
-
+Perceptivelmente, o maior elemento é, a cada modificação, levado uma posição para a direita até estar posição correta. 
 \newpage
 \subsection{Implementação}
 Segue, a seguir, o código utilizado na implementação do algoritmo em questão em Python:
@@ -42,16 +46,15 @@ def bubble(V, n):
 \end{lstlisting}
 
 
-Perceptivelmente, caso a lista já esteja ordenada, na primeira execução da malha de repetição, o \code{isIncreasing} continuará com o valor \code{True} e, portanto, o comando \code{break} será executado, parando, assim, a ordenação.
+Caso a lista já esteja ordenada, o \code{isIncreasing} continuará, na primeira execução da malha de repetição, com o valor \code{True} e, por isso, o comando \code{break} será executado, parando, assim, a ordenação.
 
-Constata-se, dessa forma, que, ao contrário do algoritmo anterior, este não realizará todas as etapas caso a lista já esteja ordenada, pois a variável \code{isIncreasing} funciona como um "testador".
+Constata-se, dessa forma, que, ao contrário do algoritmo anterior, este não realizará todas as etapas caso a lista já esteja ordenada, pois a variável \code{isIncreasing} funciona como um verificador.
 
 \subsection{Quantidade de comparações}
 Como a quantidade de comparações realizadas pelo bolha depende da lista, analisar-se-ão os casos. 
 
-Caso a lista com $n$ elementos já esteja 100\% ordenada, o algoritmo detectará "isto" na primeira passagem, pois a variável \code{isIncrease} continuará com o seu valor booleano verdadeiro após a malha de repetição mostrada na implementação, ou seja, serão realizadas $n$ comparações.
+Caso a lista com $n$ elementos já esteja 100\% ordenada, o algoritmo detectará a ordenação na primeira passagem, pois a variável \code{isIncrease} continuará com o seu valor booleano verdadeiro após a malha de repetição mostrada na implementação, ou seja, serão realizadas $n$ comparações.
 
-Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$ comparações. 
+Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$ comparações, pois, pelo mesmo motivo do inserção, serão feitas $n$ comparações na primeira itineração, $n-1$ na segunda, e assim sucessivalemente até a última, na qual será feita 1 comparação.
 
-Finalmente, nos outros casos, a análise é mais complexa e depende de outros fatores que não estão no escopo da análise. Contudo, em casos nos quais a lista não está nem ordenada nem totalmente desordenada, o algoritmo possui um comportamento quadrático\cite{bubblecomplexity}.
-%TODO citar fonte
+Finalmente, nos outros casos, a análise é mais complexa e depende de outros fatores que não estão no escopo do relatório. Contudo, em casos nos quais a lista não está nem ordenada nem totalmente desordenada, o algoritmo possui um comportamento quadrático\cite{bubblecomplexity}.
