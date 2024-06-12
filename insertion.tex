@@ -28,19 +28,19 @@ Visivelmente, observa-se que, sempre que é encontrado um elemento $e$ menor que
 \newpage
 
 \subsection{Implementação}
-Como pode-se perceber, quando é encontrado um elemento $j$ menor do que o anterior, este é "levado" para trás até que esteja na posição correta
+Como se pode perceber, quando é encontrado um elemento $j$ menor do que o anterior, este é levado para trás até que esteja na posição correta
 
 \begin{lstlisting}
 def insertion(V, n):
-last_index = 0
-for i in range(last_index,n - 1):
-    if V[i] > V[i + 1]:
-        j = i
-        while V[j] > V[j + 1]:
-            V[j + 1], V[j] = V[j], V[j + 1]
-            if j <= 0:
-                break
-            j -= 1
+    last_index = 0
+    for i in range(last_index,n - 1):
+        if V[i] > V[i + 1]:
+            j = i
+            while V[j] > V[j + 1]:
+                V[j + 1], V[j] = V[j], V[j + 1]
+                if j <= 0:
+                    break
+                j -= 1
 \end{lstlisting}
 
 \subsection{Quantidade de comparações}
@@ -48,7 +48,6 @@ Tendo em vista que as comparações realizadas depende da lista, os casos serão
 
 Caso a lista com $n$ elementos esteja em ordem, o algoritmo detectará na primeira itineração devido à permanência do valor verdadeiro da variável \code{isIncreasing}, ou seja, serão realizadas $n$ comparações.
 
-Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$. A prova é análoga à do bolha.
+Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$. A prova é análoga à do bolha, uma vez que haverá $n$ comparações na primeira execução, $n-1$ na segunda, e assim por diante, ou seja, serão realizadas $n + (n-1)+(n-2)+\cdots+1 = {n(n+1)\over 2}$ comparações.
 
-Finalmente, nos outros casos, a análise é, assim como no algoritmo anterior, compléxa. Contudo, em cenários nos quais a lista não se enquadra nos casos supracitados, o algoritmo possui um comportamento quadrático.
-%TODO citar fonte
+Finalmente, nos outros casos, a análise é, assim como no algoritmo anterior, complexa. Contudo, em cenários nos quais a lista não se enquadra nos casos supracitados, o algoritmo possui um comportamento quadrático\cite{insertioncomplexity}.

@@ -88,8 +88,8 @@
     \end{titlepage} %término da "capa"
 
 \subsection*{Resumo}
-O relatório a seguir visa dissertar acerca algoritmos de ordenação clássicos, tais como bolha, contagem, inserção e seleção, bem como investigar exemplos, apresentar a implementação em Python e elucidar como o algoritmo se comporta ao ordernar uma lista.
-Além disso, é verificado como suas eficiências mudam dadas diferentes condições iniciais, tais como porcentagem de ordenação e número de elementos da lista a ser ordenada. 
+O relatório a seguir visa dissertar acerca algoritmos de ordenação clássicos, tais como bolha, contagem, inserção e seleção, bem como investigar exemplos, apresentar a implementação em Python e elucidar como o algoritmo se comporta ao ordenar uma lista.
+Além disso, é verificado como suas eficiências mudam dadas diferentes condições iniciais, tais como porcentagem de ordenação e composição da lista a ser ordenada. 
 \
 \section*{Metodologia}
 Na criação do relatório, os testes dos algoritmos foram realizados utilizando a linguagem de programação Python, com a versão 3.10.11, no sistema operacional Windows. Durante a execução dos algoritmos, foi utilizada uma máquina com as seguintes configurações:
@@ -101,19 +101,19 @@ Na criação do relatório, os testes dos algoritmos foram realizados utilizando
 \item Sistema Operacional: Windows 11 Pro
 \end{itemize}
 
-Adicionalmente, durante a execução dos algoritmos, foram desabilitados o máximo de programas possíveis a fim de minimizar as interferências nos resutlados dos testes. 
+Adicionalmente, durante a execução dos algoritmos, foram desabilitados o máximo de programas possíveis a fim de minimizar as interferências nos resultados dos testes. 
 
 Para computar a média de execução, foi invocada uma função \textit{timeMe}, na qual eram armazenados os resultados das 10 itinerações do mesmo algoritmo e, no final, retornava a média e o desvio padrão dos resultados.
 
-Para fins simplificatórios, foram ignorados possíveis margens de erros da função que retorna a lista embaralhada. Contudo, essa margem de erro torna-se inotável durante os testes devido ao tamanho das listas utilizadas.
+Para fins simplificatórios, foram ignorados possíveis margens de erros da função que retorna a lista embaralhada. Contudo, essa margem de erro torna-se desprezível durante os testes devido ao tamanho das listas utilizadas.
 \subsection*{Testes}
     Para a realização do relatório, foram realizados dois testes. 
     
     O primeiro focou em observar os impactos causados pelo tamanho da lista a ser ordenada, ou seja, como o desvio padrão e a média mudam ao aumentar ou diminuir o tamanho da lista a ser ordenada por cada algoritmo. 
-    Para isso, foi criada uma malha de repetição e computados as médias e os devios-padrões de cada algoritmo com listas de tamanhos 1000, 5000, 10000, 50000 e 100000.
+    Para isso, foi criada uma malha de repetição e computados as médias e os desvios-padrões de cada algoritmo com listas de tamanhos 1000, 5000, 10000, 50000 e 100000.
     
-    O segundo, por outro lado, buscou elucidar acerca das mudanças causadas pela taxa de ordenação de uma lista.
-    Para isso, foi estabelecida uma segunda malha de repetição, na qual também foi computada as médias e os devios-padrçoes de cada algoritmo, mas com uma lista de 100000 elementos e com porcentagens de ordenação de 1\%, 3\%, 5\%, 10\% e 50\%.
+    O segundo, por outro lado, visou elucidar acerca das mudanças causadas pela taxa de ordenação de uma lista.
+    Para isso, foi estabelecida uma segunda malha de repetição, na qual também foi computada as médias e os desvios-padrões de cada algoritmo, mas com uma lista de 100000 elementos e com porcentagens de ordenação de 1\%, 3\%, 5\%, 10\% e 50\%.
     
 
     Para computar a média, foi criada uma função cujos parâmetros são uma lista e o tamanho desta, respectivamente. O desvio padrão, sob o mesmo ponto de vista, foi calculado por meio de uma função que recebe os mesmos parâmetros que a função outrora citada.
@@ -136,6 +136,8 @@ Para fins simplificatórios, foram ignorados possíveis margens de erros da fun�
 \begin{thebibliography}{3}
     \bibitem{bubblecomplexity}
     Bubble Sort Time Complexity and Algorithm Explained, builtin, 2023. Disponível em: \url{https://builtin.com/data-science/bubble-sort-time-complexity#:~:text=The%20bubble%20sort%20algorithm%27s%20average,complexity%3A%20O(n%C2%B2)}. Acesso em: 08 de jun. de 2024.
+    \bibitem{insertioncomplexity}
+    Insertion Sort Explained–A Data Scientists Algorithm Guide, 2021. Disponível em: \url{https://developer.nvidia.com/blog/insertion-sort-explained-a-data-scientists-algorithm-guide/#:~:text=The%20worst%2Dcase%20(and%20average,O(n)%20time%20complexity.}. Acesso em: 08 de jun. de 2024.
 \end{thebibliography}
 
 

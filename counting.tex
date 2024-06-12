@@ -1,18 +1,18 @@
 \section{Algoritmo de contagem}
-Diferentemente dos algoritmos outrora apresentados, o algoritmo em tópico possui uma complexidade linear, isto é, o tempo levado para ordernar uma lista, ao contrário dos apresentados, não cresce de maneira quadrática. 
+Diferentemente dos algoritmos outrora apresentados, o algoritmo em tópico possui uma complexidade linear, isto é, o tempo levado para ordenar uma lista, ao contrário dos apresentados, não cresce de maneira quadrática. 
 
 Em relação ao uso de memória, contudo, há uma grande desvantagem no algoritmo, uma vez que a lista auxiliar utilizada possuirá $\max{lista}-\min{lista} $ elementos; ou seja, caso o maior elemento seja 5000 e o menor 1000, a lista auxiliar possuirá de 4000 elementos.
 
 Dessa forma, o algoritmo possui um melhor proveito se utilizado para listas com pouca variação de tamanho entre os seus elementos.
 
 \subsection{Exemplo}
-Seja $M$ a lista \[4,2,3,1,4,2,2,0\] Como a diferença entre o maior e o menor é elemento é 4, a lista auxiliar $Aux$ será de tamanho 4.
-Assim, a lista auxiliar será da seguinte forma (assumindo que o primeiro elemento é $Aux[0]$): o primeiro elemento terá o valor igual à quantidade de zeros na lista original, que é 1, o segundo elemento de $Aux$, por outro lado, terá o mesmo valor 3, uma vez que há três elemento 2 na lista original. Essa lógica seguirá até chegar no último elemento.
+Seja $M$ a lista $[4,2,3,1,4,2,2,0]$. Como a diferença entre o maior e o menor é elemento é 4, a lista auxiliar $Aux$ será de tamanho 4.
+Assim, a lista auxiliar será da seguinte forma (assumindo que o primeiro elemento é $Aux[0]$): o primeiro elemento terá o valor igual à quantidade de zeros na lista original, que é 1, o segundo elemento também será 1 por motivo análogo, o terceiro elemento de $Aux$, por outro lado, receberá o valor 3, uma vez que há três elementos 2 na lista original. Essa lógica seguirá até chegar no último elemento.
 Assim, de início, a lista $Aux$ será [1,1,3,1,2].
 
-Após isso, começará a modificação da lista original: será adicionados a $n$ vezes o elemento referente ao índice da lista auxiliar, ou seja, como $Aux[0]$ é igual a 1, será adicionado um zero á lista original (adicionando pela direita um ao lado do outro). Em $Aux[2]$, por exemplo, o elemento é 3, assim, será adicionado o elemento 2 três vezes seguidas à lista $M$.
+Em seguida, começará a modificação da lista original: serão adicionados à lista original $n$ vezes o elemento referente ao índice da lista auxiliar, ou seja, como $Aux[0]$ é igual a 1, será adicionado um zero a $M$ (adicionando pela direita e um ao lado do outro). Em $Aux[2]$, por exemplo, o elemento é 3, assim, será adicionado o elemento 2 três vezes seguidas à lista $M$.
 
-Segue, a seguir, os valores de \code{Aux} a cada modificação e, logo abaixo, os valores de $M$:
+Seguem os valores de \code{Aux} a cada modificação e:
 \begin{lstlisting}
 [0, 0, 0, 0, 0]
 [1, 0, 0, 0, 0]
@@ -21,24 +21,24 @@ Segue, a seguir, os valores de \code{Aux} a cada modificação e, logo abaixo, o
 [1, 1, 3, 1, 0]
 [1, 1, 3, 1, 2]
 \end{lstlisting}
-
+\newpage
+Para fins elucidativos, serão substituídos por "0" os elementos já existentes em $M$ a fim de mostrar os valores adicionados posteriormente, ou seja, supor-se-á que a lista $M$ teve todos os seus valores trocados para 0.
 \begin{lstlisting}
-    [4, 2, 3, 1, 4, 2, 2, 0]
-    [0, 2, 3, 1, 4, 2, 2, 0]
-    [0, 1, 3, 1, 4, 2, 2, 0]
-    [0, 1, 2, 1, 4, 2, 2, 0]
-    [0, 1, 2, 2, 4, 2, 2, 0]
-    [0, 1, 2, 2, 2, 2, 2, 0]
-    [0, 1, 2, 2, 2, 3, 2, 0]
-    [0, 1, 2, 2, 2, 3, 4, 0]
-    [0, 1, 2, 2, 2, 3, 4, 4] 
+[0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0]
+[0, 1, 0, 0, 0, 0, 0, 0]
+[0, 1, 2, 0, 0, 0, 0, 0]
+[0, 1, 2, 2, 0, 0, 0, 0]
+[0, 1, 2, 2, 2, 0, 0, 0]
+[0, 1, 2, 2, 2, 3, 0, 0]
+[0, 1, 2, 2, 2, 3, 4, 0]
+[0, 1, 2, 2, 2, 3, 4, 4] 
 \end{lstlisting}
 
-Notoriamente, a lista, durante as mudanças intermediárias, não possui todos os valores iniciais, isto é, alguns dos elementos (como o 4) deixam de existir em alguma etapa e voltam a aparecer somente depois.
-
+Percebe-se, portanto, que a lista foi ordenada realizando-se nenhuma comparação.
 
 \subsection{Implementação}
-Segue a implementação em Python
+Segue a implementação do algoritmo em questão em Python.
 
 \begin{lstlisting}
 def counting(V, n):
@@ -52,9 +52,8 @@ def counting(V, n):
             V[index] = i
             index += 1
 \end{lstlisting}
-Como pode-se perceber, o algoritmo de contagem, assim como os outros, possui duas malhas de repetição. Contudo, em vez da segunda estar dentro da terceira, uma ocorre após a outra.
-Apesar disso, uma singularidade desse algoritmo é que, ao contrário dos outros, a quantidade de itinerações na primeira malha de repetição depende do tamanho do maior elemento (pensando apenas na implementação com números positivos), tornando-o eficaz para listas grandes mas com elementos menores.
-Adicionalmente, este algoritmo não ordena os elementos por comparação...
+Como se pode perceber, o algoritmo de contagem, assim como os outros, possui duas malhas de repetição. Contudo, em vez de as malhas estarem aninhada, uma ocorre após a outra.
+Apesar disso, uma singularidade desse algoritmo é que, ao contrário dos outros, a quantidade de itinerações na primeira malha de repetição depende do tamanho do maior elemento (pensando apenas na implementação com números positivos), tornando-o eficaz para listas grandes e com elementos menores.
 
 \subsection{Quantidade de comparações}
 Diferentemente de todos os algoritmos outrora citados, este não realiza qualquer comparação.

@@ -5,9 +5,8 @@ Um fato interessante é que o nome do algoritmo faz referência às bolhas em be
 
 \subsection{Exemplo}
 Seja $M$ uma lista [4,3,2,1,0].
-Na primeira passagem da primeira malha de repetição, será detectado que os elementos 4 e 3 estão em posições erradas e, assim serão trocados, deixando a lista como [3,4,2,1,0]. Novamente, será detectado que os elementos 4 e 2 estão trocados e, assim cmomo no primeio passo, 
-
-O algoritmo continuará realizando esses passos, isto é, trocar o elemento $j$ com o $j+1$ se o primeiro for maior que o segundo, até que, na 5º passagem, (pois a lista possui 5 elementos), a lista estará totalmente ordenada.
+Na primeira passagem da primeira malha de repetição, será detectado que os elementos 4 e 3 estão em posições erradas e, assim serão trocados, deixando a lista como [3,4,2,1,0]. Posteriormente, será detectado que os elementos 4 e 2 estão trocados e, assim como no primeiro passo, ambos serão permutados e, consequentemente, a lista tornar-se-á [3,2,4,1,0].
+O algoritmo continuará realizando estes passos, isto é, trocar o elemento $j$ com o $j+1$ se o primeiro for maior que o segundo, até que, na 5ª passagem, (pois a lista possui 5 elementos), a lista estará totalmente ordenada.
 
 Destarte, seguem as impressões da lista a cada modificação realizada. 
 
@@ -55,6 +54,6 @@ Como a quantidade de comparações realizadas pelo bolha depende da lista, anali
 
 Caso a lista com $n$ elementos já esteja 100\% ordenada, o algoritmo detectará a ordenação na primeira passagem, pois a variável \code{isIncrease} continuará com o seu valor booleano verdadeiro após a malha de repetição mostrada na implementação, ou seja, serão realizadas $n$ comparações.
 
-Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$ comparações, pois, pelo mesmo motivo do inserção, serão feitas $n$ comparações na primeira itineração, $n-1$ na segunda, e assim sucessivalemente até a última, na qual será feita 1 comparação.
+Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$ comparações, pois, pelo mesmo motivo do inserção, serão feitas $n$ comparações na primeira itineração, $n-1$ na segunda, e assim sucessivamente até a última, na qual será feita 1 comparação.
 
-Finalmente, nos outros casos, a análise é mais complexa e depende de outros fatores que não estão no escopo do relatório. Contudo, em casos nos quais a lista não está nem ordenada nem totalmente desordenada, o algoritmo possui um comportamento quadrático\cite{bubblecomplexity}.
+Finalmente, nos outros casos, a análise é mais complexa e depende de outros fatores que não estão no escopo do relatório. Contudo, em casos nos quais a lista não está nem ordenada, nem totalmente desordenada, o algoritmo possui um comportamento quadrático\cite{bubblecomplexity}.

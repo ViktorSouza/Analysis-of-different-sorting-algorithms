@@ -14,7 +14,7 @@
 ## AINDA ASSIM, PODERÃO SER PUNIDOS POR DESONESTIDADE ACADÊMICA.
 ## Nome : João Viktor Souza Almeida
 ## NUSP : 15521614
-## Turma:
+## Turma: MAC0110-145-2024
 ## Prof.: Roberto Hirata Jr.
 ## Referências: Com exceção das rotinas fornecidas no enunciado
 ## e em sala de aula, caso você tenha utilizado alguma referência,
@@ -36,10 +36,19 @@ import time
 
 mytime = time.perf_counter
 plt.style.use("ggplot")
-# plt.grid()
 
 
 def mediaT(V, n):
+    """
+    Retorna a média dos elementos da lista V, ou seja, a soma de todos os elementos de V dividido por n
+
+    Argumentos:
+        V: lista de números
+        n: número natural que indica a quantidade de elementos em V
+    Retorna:
+        Média dos valores de V
+    """
+
     values_sum = 0
     for num in V:
         values_sum += num
@@ -47,16 +56,34 @@ def mediaT(V, n):
 
 
 def varT(V, n):
+    """
+    Retorna a variância dos elementos da lista V
+
+    Argumentos:
+        V: lista de números
+        n: número natural que indica a quantidade de elementos em V
+    Retorna:
+        A variância dos elementos da lista V
+    """
     avg = mediaT(V, n)
     std = 0
     for num in V:
         std += (num - avg) ** 2
     std = std / (n - 1)
-    # std = std ** (1 / 2)
     return std
 
 
 def counting(V, n):
+    """
+    Implementa o algoritmo contagem, bem como ordena a lista V com a implementação realizada.
+
+    Argumentos:
+        V(list): lista de números
+        n(int): quantidade de elementos em V
+
+    Retorno:
+        Esta função não possui retorno
+    """
     max_element = max(V)
     hist_list = [0 for _ in range(max_element + 1)]
     for i in range(max_element + 1):
@@ -69,7 +96,16 @@ def counting(V, n):
 
 
 def count_element_in_array(n, V):
-    #Função auxiliar para o couting
+    """
+    Função auxiliar do algoritmo de contagem. Tem como objetivo identificar o número de vezes que o elemento n aparece na lista V
+
+    Argumentos:
+        n(int): elemento a ser contado
+        V(list): lista de números
+    Retorna:
+        int: quantidade de vezes que o elemento n aparece na lista V
+    """
+
     result = 0
     for i in V:
         if i == n:
@@ -78,6 +114,16 @@ def count_element_in_array(n, V):
 
 
 def selection(V, n):
+    """
+    Implementa o algoritmo de seleção, bem como ordena a lista V com a implementação realizada.
+
+    Argumentos:
+        V(list): lista de números
+        n(int): quantidade de elementos em V
+
+    Retorno:
+        Esta função não possui retorno
+    """
     for i in range(0, n):
         smallest_num_index = i
 
@@ -89,6 +135,16 @@ def selection(V, n):
 
 
 def bubble(V, n):
+    """
+    Implementa o algoritmo de bolha, bem como ordena a lista V com a implementação realizada.
+
+    Argumentos:
+        V(list): lista de números
+        n(int): quantidade de elementos em V
+
+    Retorno:
+        Esta função não possui retorno
+    """
     lim = n - 1
 
     while lim >= 0:
@@ -103,6 +159,16 @@ def bubble(V, n):
 
 
 def insertion(V, n):
+    """
+    Implementa o algoritmo de inserção, bem como ordena a lista V com a implementação realizada.
+
+    Argumentos:
+        V(list): lista de números
+        n(int): quantidade de elementos em V
+
+    Retorno:
+        Esta função não possui retorno
+    """
     last_index = 0
     for i in range(last_index, n - 1):
         if V[i] > V[i + 1]:
@@ -116,11 +182,32 @@ def insertion(V, n):
 
 
 def sort(V, n):
-    # Native Python algorithm
+    """
+    Implementação do algoritmo nativo do Python.
+
+    Argumentos:
+        V(list): lista de números
+        n(int): quantidade de elementos em V
+
+    Retorno:
+        Esta função não possui retorno
+    """
     V.sort()
 
 
 def embaralha(V, n, p):
+    """
+    Dada uma lista V, são embaralhados p% da lista.
+
+    Argumentos:
+        V(list): lista de números
+        n(int): quantidade de elementos em V
+        p(int): porcentagem de embaralhamento
+
+    Retorno:
+        Esta função não possui retorno
+    """
+
     for _ in range(int(n * p / 2)):
         num1 = randint(0, n - 1)
         num2 = randint(0, n - 1)
@@ -128,6 +215,19 @@ def embaralha(V, n, p):
 
 
 def timeMe(func, V, n, m, p):
+    """
+    Dada uma lista V, são embaralhados p% da lista.
+
+    Argumentos:
+        func(function): algoritmo de ordenação a ser chamado
+        V(list): lista de números
+        n(int): quantidade de elementos em V
+        m(int): número de repetições
+        p(int): porcentagem de embaralhamento
+
+    Retorno:
+        Esta função não possui retorno
+    """
     perf = []
     Vtemp = list(V)
 
@@ -142,6 +242,17 @@ def timeMe(func, V, n, m, p):
 
 
 def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
+    """
+    Dados os vetores mpontos, mediaMCMPi e desvioMCMPi, é criado um gráfico utilizando uma barra de erro
+
+    Argumentos:
+        mpontos(int[]): valores numéricos do eixo x
+        mediaMCMPi(int[][]): todas as médias a serem colocadas no gráfico
+        mediaMCMPi(int[][]): os respectivos desvios-padrões da mediaMCMPi
+
+    Retorno:
+        Esta função não possui retorno
+    """
     for i in range(len(mediaMCMPi)):
         plt.errorbar(
             mpontos, mediaMCMPi[i], desvioMCMPi[i], label=algorithms_names[i], fmt="o"
