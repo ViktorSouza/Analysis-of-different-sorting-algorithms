@@ -1,5 +1,5 @@
 \section{Algoritmo de seleção}
-O algoritmo de seleção é um algoritmo de ordenação no qual, a cada itineração, o menor elemento da lista é garantido estar na posição correta. Ou seja, na primeira itineração, assegura-se que o menor elemento ficará na primeira posição da lista, na segunda itineração, o segundo elemento, e assim por diante. 
+O algoritmo de seleção é um algoritmo de ordenação no qual, a cada itineração, o menor elemento da lista é garantido estar na posição correta. Dessa forma, na primeira itineração, assegura-se que o menor elemento ficará na primeira posição da lista, na segunda itineração, o segundo elemento, e assim por diante. 
 Uma observação pertinente é que a quantidade de comparações a ser feita independe da porcentagem de ordenação da lista.
 
 \subsection{Exemplo}
@@ -34,10 +34,11 @@ def selection(V, n):
         V[i], V[smallest_num_index] = V[smallest_num_index], V[i]
 
 \end{lstlisting}
+De fato, pelo código percebe-se que não há nenhum mecanismo implementado a fim de detectar a ordenação total da lista e, consequentemente pará-lo.
 
 \subsection{Quantidade de comparações}
-Nesta subseção, irá ser debatida a quantidade de comparações feitas pelo algoritmo em questão. Como a quantidade de comparações é "constante" neste algoritmo, será "fácil" de analisá-la; nos outros algoritmos, contudo, a análise é mais complexa devido à oscilação na quantidade de comparações.
+Nesta subseção, irá ser debatida a quantidade de comparações feitas pelo algoritmo em questão. Como a quantidade de comparações é independe da ordenação neste algoritmo, será simples de analisá-la; nos outros algoritmos, contudo, a análise é mais complexa devido à oscilação na quantidade de comparações.
 
-Suponha-se que o algoritmo recebeu uma lista com $n$ elementos. Assim, como não há um dispositivo que pare o código antes, tem-se que a primeira malha de repetição será executada $n$ vezes, em que o índice inicial $i=1$, na segunda, quando o índice $i=2$ e assim por diante. Por consequência, em cada uma dessas execuções, a segunda malha (que está dentro da primeira) será executada $n-i$ vezes, ou seja, na primeira execução, o código contido na segunda malha de repetição será executado $n$ vezes, na segunda, $n-1$, e assim por diante. Dessa forma, o código será executado $n+(n-1)+(n-2)+\cdots+(1)$, ou seja, $\sum_{i=1}^n i = \frac{n(n+1)}{2}$
+Suponha-se que o algoritmo recebeu uma lista com $n$ elementos. Assim, como não há um dispositivo que pare o código antes, tem-se que a primeira malha de repetição será executada $n-i$ vezes, em que o índice inicial $i=0$. Na segunda execução, quando o índice $i=1$, serão realizadas $n-1$ comparações e assim por diante. Por consequência, em cada uma dessas execuções, a segunda malha de repetição (a qual está na primeira) será executada $n-i$ vezes, isto é, o código será executado $n+(n-1)+(n-2)+\cdots+(1) = \sum_{i=1}^n i = \frac{n(n+1)}{2}$ vezes.
 
-Notavelmente, não há variações na quantidade de comparações, ou seja, independente do estado inicial da lista, a forma como o código será executado é a mesma.
+Notavelmente, não há variações na quantidade de comparações e, consequentemente, a forma como o código será executado é a mesma independentente do estado inicial da lista.

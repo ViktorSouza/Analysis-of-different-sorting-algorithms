@@ -83,13 +83,15 @@
     {\large MAC110 - Introdução à Computação}\\[5.1cm]
     {\bf \huge Análise de diferentes algoritmos de ordenação}\\[5.1cm] 
     \end{center} %término do comando centralizar
-    {\large Aluno(a): João Viktor Souza Almeida}\\[0.7cm] % o comando \large deixa o texto grande
+    {\large Aluno: João Viktor Souza Almeida}\\[0.7cm] % o comando \large deixa o texto grande
+    {\large NUSP: 15521614}\\[0.7cm] % o comando \large deixa o texto grande
+    {\large Turma: MAC0110-145-2024}\\[0.7cm] % o comando \large deixa o texto grande
     {\large Professor: Roberto Hirata Junior}\\[5.1cm]
     \end{titlepage} %término da "capa"
 
 \subsection*{Resumo}
 O relatório a seguir visa dissertar acerca algoritmos de ordenação clássicos, tais como bolha, contagem, inserção e seleção, bem como investigar exemplos, apresentar a implementação em Python e elucidar como o algoritmo se comporta ao ordenar uma lista.
-Além disso, é verificado como suas eficiências mudam dadas diferentes condições iniciais, tais como porcentagem de ordenação e composição da lista a ser ordenada. 
+Além disso, é verificado como a eficiência dos algoritmos variam dadas diferentes condições iniciais, tais como porcentagem de ordenação e composição da lista a ser ordenada. 
 \
 \section*{Metodologia}
 Na criação do relatório, os testes dos algoritmos foram realizados utilizando a linguagem de programação Python, com a versão 3.10.11, no sistema operacional Windows. Durante a execução dos algoritmos, foi utilizada uma máquina com as seguintes configurações:
@@ -101,19 +103,19 @@ Na criação do relatório, os testes dos algoritmos foram realizados utilizando
 \item Sistema Operacional: Windows 11 Pro
 \end{itemize}
 
-Adicionalmente, durante a execução dos algoritmos, foram desabilitados o máximo de programas possíveis a fim de minimizar as interferências nos resultados dos testes. 
+Adicionalmente, a fim de minimizar possíveis interferências nos resultados dos testes, os códigos foram executados com o mínimo de programas em segundo plano. 
 
 Para computar a média de execução, foi invocada uma função \textit{timeMe}, na qual eram armazenados os resultados das 10 itinerações do mesmo algoritmo e, no final, retornava a média e o desvio padrão dos resultados.
 
-Para fins simplificatórios, foram ignorados possíveis margens de erros da função que retorna a lista embaralhada. Contudo, essa margem de erro torna-se desprezível durante os testes devido ao tamanho das listas utilizadas.
+Para fins simplificatórios, foram ignoradas possíveis margens de erros da função que embaralha as listas. Contudo, essa margem de erro torna-se desprezível durante os testes devido ao tamanho das listas utilizadas.
+\newpage
 \subsection*{Testes}
     Para a realização do relatório, foram realizados dois testes. 
-    
     O primeiro focou em observar os impactos causados pelo tamanho da lista a ser ordenada, ou seja, como o desvio padrão e a média mudam ao aumentar ou diminuir o tamanho da lista a ser ordenada por cada algoritmo. 
     Para isso, foi criada uma malha de repetição e computados as médias e os desvios-padrões de cada algoritmo com listas de tamanhos 1000, 5000, 10000, 50000 e 100000.
     
     O segundo, por outro lado, visou elucidar acerca das mudanças causadas pela taxa de ordenação de uma lista.
-    Para isso, foi estabelecida uma segunda malha de repetição, na qual também foi computada as médias e os desvios-padrões de cada algoritmo, mas com uma lista de 100000 elementos e com porcentagens de ordenação de 1\%, 3\%, 5\%, 10\% e 50\%.
+    Para isso, foi estabelecida uma segunda malha de repetição, na qual também foram computados as médias e os desvios-padrões de cada algoritmo, mas com uma lista de 100000 elementos e com porcentagens de ordenação de 1\%, 3\%, 5\%, 10\% e 50\%.
     
 
     Para computar a média, foi criada uma função cujos parâmetros são uma lista e o tamanho desta, respectivamente. O desvio padrão, sob o mesmo ponto de vista, foi calculado por meio de uma função que recebe os mesmos parâmetros que a função outrora citada.

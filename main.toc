@@ -19,3 +19,4 @@
 \contentsline {subsection}{\numberline {5.1}Variação na quantidade de elementos}{12}{}%
 \contentsline {subsection}{\numberline {5.2}Ordenação prévia}{13}{}%
 \contentsline {section}{\numberline {6}Conclusão}{14}{}%
+\contentsline {section}{\numberline {7}Considerações finais}{14}{}%

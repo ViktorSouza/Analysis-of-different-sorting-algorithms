@@ -5,8 +5,8 @@ Um fato interessante é que o nome do algoritmo faz referência às bolhas em be
 
 \subsection{Exemplo}
 Seja $M$ uma lista [4,3,2,1,0].
-Na primeira passagem da primeira malha de repetição, será detectado que os elementos 4 e 3 estão em posições erradas e, assim serão trocados, deixando a lista como [3,4,2,1,0]. Posteriormente, será detectado que os elementos 4 e 2 estão trocados e, assim como no primeiro passo, ambos serão permutados e, consequentemente, a lista tornar-se-á [3,2,4,1,0].
-O algoritmo continuará realizando estes passos, isto é, trocar o elemento $j$ com o $j+1$ se o primeiro for maior que o segundo, até que, na 5ª passagem, (pois a lista possui 5 elementos), a lista estará totalmente ordenada.
+Na primeira passagem da primeira malha de repetição, será detectado que os elementos 4 e 3 estão em posições erradas e, assim, serão trocados, deixando a lista com os valores [3,4,2,1,0]. Posteriormente, será detectado que os elementos 4 e 2 estão trocados e, assim como no primeiro passo, ambos serão permutados e, como resultado, a lista tornar-se-á [3,2,4,1,0]. Sendo assim, a última execução da primeira passagem posicionará o elemento 4 na última possição da lista, garantindo que o maior elemento esteja na posição correta.
+O algoritmo continuará realizando estes passos, isto é, trocar o elemento $j$ com o $j+1$ se o primeiro for maior que o segundo até que, na 5ª passagem, (pois a lista possui 5 elementos), a lista estará totalmente ordenada.
 
 Destarte, seguem as impressões da lista a cada modificação realizada. 
 
@@ -25,10 +25,10 @@ Destarte, seguem as impressões da lista a cada modificação realizada.
 \end{lstlisting}
 %TODO adicionar, de fato, todas as mudanças
 
-Perceptivelmente, o maior elemento é, a cada modificação, levado uma posição para a direita até estar posição correta. 
+Perceptivelmente, o maior elemento é, a cada modificação, levado uma posição para a direita até estar na posição correta. 
 \newpage
 \subsection{Implementação}
-Segue, a seguir, o código utilizado na implementação do algoritmo em questão em Python:
+A seguir, encontra-se o código utilizado na implementação do algoritmo em questão no Python:
 
 \begin{lstlisting}
 def bubble(V, n):
@@ -47,12 +47,12 @@ def bubble(V, n):
 
 Caso a lista já esteja ordenada, o \code{isIncreasing} continuará, na primeira execução da malha de repetição, com o valor \code{True} e, por isso, o comando \code{break} será executado, parando, assim, a ordenação.
 
-Constata-se, dessa forma, que, ao contrário do algoritmo anterior, este não realizará todas as etapas caso a lista já esteja ordenada, pois a variável \code{isIncreasing} funciona como um verificador.
+Constata-se, dessa forma, que, ao contrário do algoritmo anterior, este não realizará todas as etapas caso a lista já esteja ordenada, pois a variável\linebreak \code{isIncreasing} funciona como um verificador.
 
 \subsection{Quantidade de comparações}
-Como a quantidade de comparações realizadas pelo bolha depende da lista, analisar-se-ão os casos. 
+Como a quantidade de comparações realizadas pelo bolha depende das características iniciais da lista, analisar-se-ão os casos. 
 
-Caso a lista com $n$ elementos já esteja 100\% ordenada, o algoritmo detectará a ordenação na primeira passagem, pois a variável \code{isIncrease} continuará com o seu valor booleano verdadeiro após a malha de repetição mostrada na implementação, ou seja, serão realizadas $n$ comparações.
+Caso a lista com $n$ elementos já esteja ordenada, o algoritmo detectará a ordenação na primeira passagem, pois a variável \code{isIncrease} continuará com o seu valor booleano verdadeiro após a malha de repetição mostrada na implementação, ou seja, serão realizadas $n$ comparações.
 
 Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$ comparações, pois, pelo mesmo motivo do inserção, serão feitas $n$ comparações na primeira itineração, $n-1$ na segunda, e assim sucessivamente até a última, na qual será feita 1 comparação.
 

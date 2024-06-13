@@ -43,8 +43,8 @@ def mediaT(V, n):
     Retorna a média dos elementos da lista V, ou seja, a soma de todos os elementos de V dividido por n
 
     Argumentos:
-        V: lista de números
-        n: número natural que indica a quantidade de elementos em V
+        V(int[]): lista de números
+        n(int): número natural que indica a quantidade de elementos em V
     Retorna:
         Média dos valores de V
     """
@@ -60,8 +60,8 @@ def varT(V, n):
     Retorna a variância dos elementos da lista V
 
     Argumentos:
-        V: lista de números
-        n: número natural que indica a quantidade de elementos em V
+        V(int): lista de números
+        n(int[]): número natural que indica a quantidade de elementos em V
     Retorna:
         A variância dos elementos da lista V
     """
@@ -267,11 +267,6 @@ def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
 algorithms_names = []
 
 
-def main():
-    first_test()
-    second_test()
-
-
 def first_test():
     global algorithms_names
     avg_exp_1 = []
@@ -332,3 +327,11 @@ def second_test():
     plt.ylabel("Tempo (s)")
     plt.xlabel("Porcentagem de embaralhamento")
     GraficaSortings(percentages, avg_exp_2, std_exp_2)
+
+
+def main():
+    first_test()
+    second_test()
+
+
+main()
