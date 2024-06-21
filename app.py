@@ -30,12 +30,23 @@ import random
 from multiprocessing import Process
 from random import randint
 from sys import platform
+import ctypes
+
+debug = True
+
 
 random.seed(32)
 import time
 
 mytime = time.perf_counter
 plt.style.use("ggplot")
+
+libsort = ctypes.CDLL("./libsortings.so")
+
+libsort.selectionC.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.c_int]
+libsort.insertionC.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.c_int]
+libsort.bubbleC.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.c_int]
+libsort.countingC.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.c_int]
 
 
 def mediaT(V, n):
@@ -195,6 +206,26 @@ def sort(V, n):
     V.sort()
 
 
+def countingC(V, n):
+    pV = (ctypes.c_int * n)(*V)
+    libsort.countingC(pV, n)
+
+
+def selectionC(V, n):
+    pV = (ctypes.c_int * n)(*V)
+    libsort.countingC(pV, n)
+
+
+def insertionC(V, n):
+    pV = (ctypes.c_int * n)(*V)
+    libsort.countingC(pV, n)
+
+
+def bubbleC(V, n):
+    pV = (ctypes.c_int * n)(*V)
+    libsort.countingC(pV, n)
+
+
 def embaralha(V, n, p):
     """
     Dada uma lista V, são embaralhados p% da lista.
@@ -258,9 +289,11 @@ def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
             mpontos, mediaMCMPi[i], desvioMCMPi[i], label=algorithms_names[i], fmt="o"
         )
         plt.legend()
-    plt.savefig(f"./plots/result_{time.time()}.png")
+    if(debug):
+        plt.show()
+    else:
+        plt.savefig(f"./plots/result_{time.time()}.png")
 
-    # plt.show()
     plt.clf()
 
 
@@ -272,10 +305,12 @@ def first_test():
     avg_exp_1 = []
     std_exp_1 = []
 
-    sizes = [1000, 5000, 10000, 50000, 100000]
+    sizes = [500, 1000, 2000] if debug else [1000, 5000, 10000, 50000, 100000]
 
-    algorithms = [selection, bubble, insertion, counting, sort]
-    algorithms_names = ["Seleção", "Bolha", "Inserção", "Contagem", "Nativo"]
+    # algorithms = [selection, bubble, insertion, counting, sort]
+    # algorithms_names = ["Seleção", "Bolha", "Inserção", "Contagem", "Nativo"]
+    algorithms = [insertion, insertionC]
+    algorithms_names = ["Inserção", "Inserção C"]
 
     # A fim de diminuir possiveis variâncias, foram criadas as listas antes
     arrays = [[randint(0, 9999) for _ in range(i)] for i in sizes]
@@ -303,10 +338,12 @@ def second_test():
     avg_exp_2 = []
     std_exp_2 = []
 
-    n = 100000
+    n = 1000 if debug else 100000
     percentages = [0.01, 0.03, 0.05, 0.1, 0.5]
-    algorithms = [bubble, insertion]
-    algorithms_names = ["Bolha", "Inserção"]
+    # algorithms = [bubble, insertion]
+    # algorithms_names = ["Bolha", "Inserção"]
+    algorithms = [insertion, insertionC]
+    algorithms_names = ["Inserção", "Inserção C"]
 
     for i, algorithm in enumerate(algorithms):
         avg = []
