@@ -33,7 +33,7 @@ from sys import platform
 import ctypes
 import json
 
-debug = False
+debug = True
 
 
 random.seed(32)
@@ -306,7 +306,7 @@ def first_test():
     avg_exp_1 = []
     std_exp_1 = []
 
-    sizes = [500, 1000, 1500, 2000] if debug else [1000, 5000, 10000, 50000, 100000]
+    sizes = [200, 500, 1000, 1500] if debug else [1000, 5000, 10000, 50000, 100000]
 
     algorithms = [counting, countingC, bubbleC, selectionC, insertionC]
     algorithms_names = ["Contagem", "Contagem C", "Bolha C", "Seleção C", "Inserção C"]
@@ -328,8 +328,8 @@ def first_test():
 
         with open("data.json", "r") as f:
             data = json.load(f)
-        data["avg_exp_1"] = avg_exp_1
-        data["std_exp_1"] = std_exp_1
+        data["avg_exp_1"] = list(zip(algorithms_names, avg_exp_1))
+        data["std_exp_1"] = list(zip(algorithms_names, std_exp_1))
         with open("./data.json", "w") as f:
             json.dump(data, f, indent=4)
 
@@ -343,7 +343,7 @@ def second_test():
     avg_exp_2 = []
     std_exp_2 = []
 
-    n = 1000 if debug else 100000
+    n = 200 if debug else 100000
     percentages = [0.01, 0.03, 0.05, 0.1, 0.5]
     algorithms = [bubble, insertion]
     algorithms_names = ["Bolha", "Inserção"]
@@ -369,8 +369,8 @@ def second_test():
 
     with open("data.json", "r") as f:
         data = json.load(f)
-    data["avg_exp_2"] = avg_exp_2
-    data["std_exp_2"] = std_exp_2
+    data["avg_exp_2"] = list(zip(algorithms_names, avg_exp_2))
+    data["std_exp_2"] = list(zip(algorithms_names, std_exp_2))
     with open("./data.json", "w") as f:
         json.dump(data, f, indent=4)
 
@@ -379,7 +379,7 @@ def second_test():
 
 def main():
     first_test()
-    # second_test()
+    second_test()
 
 
 main()
