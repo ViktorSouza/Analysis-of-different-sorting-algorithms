@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
 #include <stdbool.h>
 
 void selectionC(int *V, int n)

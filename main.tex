@@ -91,10 +91,17 @@
 
 \subsection*{Resumo}
 O relatório a seguir visa dissertar acerca algoritmos de ordenação clássicos, tais como bolha, contagem, inserção e seleção, bem como investigar exemplos, apresentar a implementação em Python e elucidar como o algoritmo se comporta ao ordenar uma lista.
+
 Além disso, é verificado como a eficiência dos algoritmos variam dadas diferentes condições iniciais, tais como porcentagem de ordenação e composição da lista a ser ordenada. 
+
+Por fim, foram implementados os algoritmos na linguagem C a fim de analisar os seus comportamentos em uma linguagem compilada, em contraste com a linguagem utilizada, Python, que é interpretada.
 \
 \section*{Metodologia}
-Na criação do relatório, os testes dos algoritmos foram realizados utilizando a linguagem de programação Python, com a versão 3.10.11, no sistema operacional Windows. Durante a execução dos algoritmos, foi utilizada uma máquina com as seguintes configurações:
+Na criação do relatório, os testes dos algoritmos foram realizados utilizando a linguagem de programação Python, com a versão 3.10.11, no sistema operacional Windows.
+Além disso, os arquivos em C foram compilados utilizando o GCC na versão 13.1.0.
+
+Durante a execução dos algoritmos, foi utilizada uma máquina com as seguintes configurações:
+
 \begin{itemize}
 \item    Processador (CPU): Ryzen 5 3350G 
 \item Memória (RAM): 16GB DDR4 @ 3200MHz
@@ -102,12 +109,13 @@ Na criação do relatório, os testes dos algoritmos foram realizados utilizando
 \item Placa de Vídeo (GPU): Radeon Vega 11
 \item Sistema Operacional: Windows 11 Pro
 \end{itemize}
-
+% TODO revisar o código
 Adicionalmente, a fim de minimizar possíveis interferências nos resultados dos testes, os códigos foram executados com o mínimo de programas em segundo plano. 
+Para computar a média de execução, foi criada uma função na qual que retornava a média e o desvio padrão das 10 itinerações do mesmo algoritmos.
+Além disso, foram ignoradas possíveis margens de erros da função que embaralha as listas. Contudo, essa margem de erro torna-se desprezível devido ao tamanho das listas utilizadas.
 
-Para computar a média de execução, foi invocada uma função \textit{timeMe}, na qual eram armazenados os resultados das 10 itinerações do mesmo algoritmo e, no final, retornava a média e o desvio padrão dos resultados.
-
-Para fins simplificatórios, foram ignoradas possíveis margens de erros da função que embaralha as listas. Contudo, essa margem de erro torna-se desprezível durante os testes devido ao tamanho das listas utilizadas.
+Por fim, na implementação dos códigos na linguagem C, foi importada a biblioteca externa \code{stdbool.h} a fim de criar variáveis booleanas. Além disso, para possibilitar a importação das funções para o arquivo em Python, foi executado, no terminal, o 
+%TODO colocar o código executado
 \newpage
 \subsection*{Testes}
     Para a realização do relatório, foram realizados dois testes. 
@@ -135,6 +143,12 @@ Para fins simplificatórios, foram ignoradas possíveis margens de erros da fun�
 \include{conclusion.tex}
 \include{c.tex}
 
+\section{Considerações finais}
+A realização deste relatório possibilitou o aprendizado em diversas áreas do conhecimento, especialmente na análise de algoritmos, ao separá-los por casos e verificá-los individualmente.
+Além disso, o projeto proporcionou uma ampla experiência na criação de textos acadêmicos e na investigação da eficiência e do comportamento de um algoritmo.
+Portanto, o exercício programa permitiu um aprimoramento em competências que serão de extrema importância para futuros projetos.
+
+\newpage
 \begin{thebibliography}{3}
     \bibitem{bubblecomplexity}
     Bubble Sort Time Complexity and Algorithm Explained, builtin, 2023. Disponível em: \url{https://builtin.com/data-science/bubble-sort-time-complexity#:~:text=The%20bubble%20sort%20algorithm%27s%20average,complexity%3A%20O(n%C2%B2)}. Acesso em: 08 de jun. de 2024.

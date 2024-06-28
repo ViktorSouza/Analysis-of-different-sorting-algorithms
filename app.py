@@ -31,8 +31,9 @@ from multiprocessing import Process
 from random import randint
 from sys import platform
 import ctypes
+import json
 
-debug = True
+debug = False
 
 
 random.seed(32)
@@ -289,12 +290,12 @@ def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
             mpontos, mediaMCMPi[i], desvioMCMPi[i], label=algorithms_names[i], fmt="o"
         )
         plt.legend()
-    if(debug):
+    if debug:
         plt.show()
     else:
         plt.savefig(f"./plots/result_{time.time()}.png")
 
-    plt.clf()
+    # plt.clf()
 
 
 algorithms_names = []
@@ -305,13 +306,10 @@ def first_test():
     avg_exp_1 = []
     std_exp_1 = []
 
-    sizes = [500, 1000, 2000] if debug else [1000, 5000, 10000, 50000, 100000]
+    sizes = [500, 1000, 1500, 2000] if debug else [1000, 5000, 10000, 50000, 100000]
 
-    # algorithms = [selection, bubble, insertion, counting, sort]
-    # algorithms_names = ["Seleção", "Bolha", "Inserção", "Contagem", "Nativo"]
-    algorithms = [insertion, insertionC]
-    algorithms_names = ["Inserção", "Inserção C"]
-
+    algorithms = [counting, countingC, bubbleC, selectionC, insertionC]
+    algorithms_names = ["Contagem", "Contagem C", "Bolha C", "Seleção C", "Inserção C"]
     # A fim de diminuir possiveis variâncias, foram criadas as listas antes
     arrays = [[randint(0, 9999) for _ in range(i)] for i in sizes]
     for i, algorithm in enumerate(algorithms):
@@ -328,6 +326,13 @@ def first_test():
         avg_exp_1.append(avg)
         std_exp_1.append(std)
 
+        with open("data.json", "r") as f:
+            data = json.load(f)
+        data["avg_exp_1"] = avg_exp_1
+        data["std_exp_1"] = std_exp_1
+        with open("./data.json", "w") as f:
+            json.dump(data, f, indent=4)
+
     plt.ylabel("Tempo (s)")
     plt.xlabel("Quantidade de elementos")
     GraficaSortings(sizes, avg_exp_1, std_exp_1)
@@ -340,10 +345,8 @@ def second_test():
 
     n = 1000 if debug else 100000
     percentages = [0.01, 0.03, 0.05, 0.1, 0.5]
-    # algorithms = [bubble, insertion]
-    # algorithms_names = ["Bolha", "Inserção"]
-    algorithms = [insertion, insertionC]
-    algorithms_names = ["Inserção", "Inserção C"]
+    algorithms = [bubble, insertion]
+    algorithms_names = ["Bolha", "Inserção"]
 
     for i, algorithm in enumerate(algorithms):
         avg = []
@@ -363,12 +366,20 @@ def second_test():
 
     plt.ylabel("Tempo (s)")
     plt.xlabel("Porcentagem de embaralhamento")
+
+    with open("data.json", "r") as f:
+        data = json.load(f)
+    data["avg_exp_2"] = avg_exp_2
+    data["std_exp_2"] = std_exp_2
+    with open("./data.json", "w") as f:
+        json.dump(data, f, indent=4)
+
     GraficaSortings(percentages, avg_exp_2, std_exp_2)
 
 
 def main():
     first_test()
-    second_test()
+    # second_test()
 
 
 main()
