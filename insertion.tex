@@ -1,9 +1,9 @@
 \section{Algoritmo de inserção}
-O algoritmo de inserção possui, como principal característica, a asseguração de que, a cada itineração $n$, os n-ésimos primeiros elementos estarão ordenados. Além disso, assim como o de bolha, este varia com a porcentagem de ordenação da lista recebida, ou seja, caso a lista já esteja ordenada, será detectado logo na primeira passagem e, assim, não haverá nada a ser feito. 
+O algoritmo de inserção possui, como principal característica, a asseguração de que, a cada itineração $n$, os n-ésimos primeiros elementos estarão ordenados. Além disso, assim como o bolha, este varia com a porcentagem de ordenação da lista recebida, ou seja, caso a lista já esteja ordenada, será detectado logo na primeira passagem e, assim, não haverá nada a ser feito e a execução será interrompida. 
 
 
 \subsection{Exemplo}
-Seja, para fins de exemplificação, $V$ a lista $[4,3,2,1,0]$.  
+Seja $V$, para fins de exemplificação, a lista $[4,3,2,1,0]$.  
 
 O algoritmo em questão funcionará da seguinte forma: a sequência começa dada como ordenada até que se ache um $j$ tal que $V[j]>V[j+1]$, onde $j$ é um inteiro maior ou igual a zero e menor que o tamanho da lista menos um. 
 Caso isso ocorra, o algoritmo trocará os dois valores e comparará, da mesma forma, $V[j-1]$ e $V[j]$. Quando o valor da antiga posição $j$ for menor do que a posição sucessora, garante-se, então, que a sequência está ordenada de 0 até $j+1$. Contudo, caso não exista um $j$, então o algoritmo indica que a lista já está ordenada e, assim, evita mais comparações.
@@ -24,11 +24,10 @@ Logo, tomando o vetor $M$, caso este fosse impresso a cada modificação, os res
 [0, 1, 2, 3, 4]
 \end{lstlisting}
 
-Visivelmente, observa-se que, sempre que é encontrado um elemento $e$ menor que o anterior, ambos são trocados e, em seguida, o algoritmo começa a verificar e mover $e$ para trás até o elemento em questão fique em sua posição correta.
+Visivelmente, observa-se que, sempre que é encontrado um elemento $n$ menor que o anterior, ambos são trocados e, em seguida, o algoritmo começa a verificar e mover $n$ para trás até o elemento em questão fique em sua posição correta.
 \newpage
 
 \subsection{Implementação}
-Como se pode perceber, quando é encontrado um elemento $j$ menor do que o anterior, este é levado para trás até que esteja na posição correta
 
 \begin{lstlisting}
 def insertion(V, n):
@@ -43,11 +42,13 @@ def insertion(V, n):
                 j -= 1
 \end{lstlisting}
 
+Como se pode perceber, quando é encontrado um elemento $j$ menor do que o anterior, este é levado para trás até que esteja na posição correta.
+
 \subsection{Quantidade de comparações}
 Tendo em vista que as comparações realizadas dependem do vetor, os casos serão analisados. 
 
-Caso a lista com $n$ elementos esteja em ordem, o algoritmo detectará na primeira itineração devido à permanência do valor verdadeiro da variável \code{isIncreasing}, ou seja, serão realizadas $n$ comparações.
+Caso a lista com $n$ elementos esteja em ordem, o algoritmo detectará na primeira itineração devido ao valor verdadeiro da variável \code{isIncreasing}, ou seja, serão realizadas $n$ comparações.
 
-Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$. A prova é análoga à do bolha, uma vez que haverá $n$ comparações na primeira execução, $n-1$ na segunda, e assim por diante, ou seja, serão realizadas $n + (n-1)+(n-2)+\cdots+1 = {n(n+1)\over 2}$ comparações.
+Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$ comparações. A prova é análoga à do bolha, uma vez que haverá $n$ comparações na primeira execução, $n-1$ na segunda, e assim por diante, ou seja, serão realizadas $n + (n-1)+(n-2)+\cdots+1 = {n(n+1)\over 2}$ comparações.
 
 Finalmente, nos outros casos, a análise é, assim como no algoritmo anterior, complexa. Contudo, em cenários nos quais a sequência não se enquadra nos casos supracitados, o algoritmo possui um comportamento quadrático\cite{insertioncomplexity}.

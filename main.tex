@@ -6,11 +6,19 @@
 % \usepackage{minted}
 % \usemintedstyle{manni}
 \usepackage{listings}
+\usepackage{multirow}
 
-% \usepackage{siunitx}
-% \sisetup{table-number-alignment=center, exponent-product=\cdot}
-
-
+\usepackage{siunitx}
+% \sisetup{exponent-mode = scientific}
+\sisetup{
+round-mode = places,
+round-precision = 3,
+exponent-thresholds  = 0:3,
+output-exponent-marker=\ensuremath{\mathrm{e}},
+% scientific-notation=true,
+% exponent-base = e
+}
+\newcolumntype{F}{S[table-number-alignment=center, table-format=2.4]}
 
 
 \usepackage{xcolor} % for setting colors
@@ -94,8 +102,8 @@
     \end{titlepage} %término da "capa"
 
 \subsection*{Resumo}
-O relatório a seguir visa dissertar acerca algoritmos de ordenação clássicos, tais como bolha, contagem, inserção e seleção, bem como investigar exemplos, apresentar a implementação em Python e elucidar como o algoritmo se comporta ao ordenar uma lista.
-Além disso, é verificado como a eficiência dos algoritmos variam dadas diferentes condições iniciais, tais como porcentagem de ordenação e composição da lista a ser ordenada. 
+O relatório a seguir visa dissertar acerca dos algoritmos de ordenação clássicos, tais como bolha, contagem, inserção e seleção, bem como investigar exemplos, apresentar a implementação em Python e elucidar como o algoritmo se comporta ao ordenar uma lista.
+Além disso, é verificado como a eficiência dos algoritmos variam dadas diferentes condições iniciais, como a porcentagem de ordenação e a composição da lista a ser ordenada. 
 Por fim, foram implementados os algoritmos na linguagem C a fim de analisar os seus comportamentos em uma linguagem compilada, em contraste com a linguagem utilizada, Python, que é interpretada.
 \
 
@@ -118,24 +126,24 @@ Durante a execução dos algoritmos, foi utilizada uma máquina com as seguintes
 \item Sistema Operacional: Windows 11 Pro
 \end{itemize}
 % TODO revisar o código
-Adicionalmente, a fim de minimizar possíveis interferências nos resultados dos testes, os códigos foram executados com o mínimo de programas em segundo plano. 
-Para computar a média de execução, foi criada uma função na qual que retornava a média e o desvio padrão das 10 itinerações do mesmo algoritmos.
-Além disso, foram ignoradas possíveis margens de erros da função que embaralha as sequências. Contudo, essa margem de erro torna-se desprezível devido ao tamanho das listas utilizadas.
+A fim de minimizar possíveis interferências nos resultados dos testes, os códigos foram executados com o mínimo de programas em segundo plano. 
+Adicionalmente, para computar a média de execução, foi criada uma função que retornava a média e o desvio-padrão das 10 itinerações do mesmo algoritmos.
+Além disso, foram ignoradas possíveis margens de erros da função que embaralha as sequências; contudo, essa margem de erro torna-se desprezível devido ao tamanho das listas utilizadas.
 
-Por fim, na implementação dos códigos na linguagem C, foi importada a biblioteca externa \code{stdbool.h} a fim de criar variáveis booleanas. Além disso, para possibilitar a importação das funções para o arquivo em Python, foi executado, no terminal, o comando \code{gcc -shared -fPIC -o libsortings.so main.c}, cuja função foi transformar as funções em uma biblioteca, possibilitando a invocação destes no Python.
+Por fim, na implementação dos códigos na linguagem C, foi importada a biblioteca \code{stdbool.h} a fim de criar variáveis booleanas. Além disso, para possibilitar a importação das funções para o arquivo em Python, foi executado, no terminal, o comando \code{gcc -shared -fPIC -o libsortings.so main.c}, cuja função é transformar o arquivo em uma biblioteca, possibilitando a invocação dos métodos no Python.
 
-\noindent\textbf{Palavras-chave:} insertion, bubble, counting, selection, algoritmos, ordenação, análise;
+\noindent\textbf{Palavras-chave:} insertion, bubble, counting, selection, algoritmos, ordenação, análise, python, c, linguagem;
 
 \subsection*{Testes}
     Para a realização do relatório, foram realizados dois testes. 
-    O primeiro focou em observar os impactos causados pelo tamanho da sequência a ser ordenada, ou seja, como o desvio padrão e a média mudam ao aumentar ou diminuir o tamanho da lista a ser ordenada por cada algoritmo. 
+    O primeiro focou em observar os impactos causados pelo tamanho da sequência a ser ordenada, ou seja, como o desvio-padrão e a média mudam ao aumentar ou diminuir o tamanho da lista a ser ordenada por cada algoritmo. 
     Para isso, foi criada uma malha de repetição e computados as médias e os desvios-padrões de cada algoritmo com sequências de tamanhos 1000, 5000, 10000, 50000 e 100000.
     
     O segundo, por outro lado, visou elucidar acerca das mudanças causadas pela taxa de ordenação de um vetor.
     Para isso, foi estabelecida uma segunda malha de repetição, na qual também foram computados as médias e os desvios-padrões de cada algoritmo, mas com uma lista de 100000 elementos e com porcentagens de ordenação de 1\%, 3\%, 5\%, 10\% e 50\%.
     
 
-    Para computar a média, foi criada uma função cujos parâmetros são uma lista e o tamanho desta, respectivamente. O desvio padrão, sob o mesmo ponto de vista, foi calculado por meio de uma função que recebe os mesmos parâmetros que a função outrora citada.
+    Para computar a média, foi criada uma função cujos parâmetros são uma lista e o tamanho desta, respectivamente. O desvio-padrão, sob o mesmo ponto de vista, foi calculado por meio de uma função que recebe os mesmos parâmetros que a função outrora citada.
     
 
 
@@ -150,11 +158,6 @@ Por fim, na implementação dos códigos na linguagem C, foi importada a bibliot
 \include{results.tex}
 \include{c.tex}
 \include{conclusion.tex}
-
-\section{Considerações finais}
-A realização deste relatório possibilitou o aprendizado em diversas áreas do conhecimento, especialmente na análise de algoritmos, ao separá-los por casos e verificá-los individualmente.
-Além disso, o projeto proporcionou uma ampla experiência na criação de textos acadêmicos e na investigação da eficiência e do comportamento de um algoritmo.
-Portanto, o exercício programa permitiu um aprimoramento em competências que serão de extrema importância para futuros projetos.
 
 \newpage
 \begin{thebibliography}{3}

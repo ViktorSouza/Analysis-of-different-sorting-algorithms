@@ -10,7 +10,7 @@ Seja $M$ o vetor $[4,2,3,1,4,2,2,0]$. Como a diferença entre o maior e o menor 
 Assim, $Aux$ será da seguinte forma (assumindo que o primeiro elemento é $Aux[0]$): o primeiro elemento terá o valor igual à quantidade de zeros no vetor original, que é 1; o segundo elemento também será 1 por motivo análogo, e o terceiro elemento de $Aux$, por outro lado, receberá o valor 3, uma vez que há três elementos 2 na sequência original. Essa lógica prevalecerá até último elemento.
 Assim, de início, a sequência numérica $Aux$ será [1,1,3,1,2].
 
-Em seguida, começará a modificação da sequência original: serão adicionados à lista original $n$ vezes o elemento referente ao índice de $Aux$, ou seja, como $Aux[0]$ é igual a 1, será adicionado um zero a $M$ (adicionando da esquerda para a direita e um ao lado do outro). Em $Aux[2]$, por exemplo, o elemento é 3 e, assim, será adicionado o elemento 2 três vezes seguidas à lista $M$.
+Em seguida, começará a modificação da sequência original: serão adicionados à lista original $n$ vezes o elemento referente ao índice de $Aux$, ou seja, como $Aux[0]$ é igual a 1, será adicionado um zero a $M$ (adicionando da esquerda para a direita e um ao lado do outro). Em $Aux[2]$, por exemplo, como o elemento é 3, será adicionado o elemento 2 três vezes seguidas à lista $M$.
 
 Seguem os valores de \code{Aux} a cada modificação:
 \begin{lstlisting}
@@ -52,8 +52,9 @@ def counting(V, n):
             V[index] = i
             index += 1
 \end{lstlisting}
+
 Como se pode perceber, o algoritmo de contagem, assim como os outros, possui duas malhas de repetição. Contudo, em vez de as malhas estarem aninhada, uma ocorre após a outra.
-Apesar disso, uma singularidade desse algoritmo é que, ao contrário dos citados, a quantidade de itinerações na primeira malha de repetição depende do tamanho do maior elemento (pensando apenas na implementação com números positivos), tornando-o eficaz para listas grandes e com elementos menores.
+Além disso, uma singularidade desse algoritmo é que, ao contrário dos citados, a quantidade de itinerações na primeira malha de repetição depende do tamanho do maior elemento (pensando apenas na implementação com números positivos), tornando-o eficaz para listas grandes e com elementos menores.
 
 \subsection{Quantidade de comparações}
 Diferentemente de todos os algoritmos outrora citados, este não realiza qualquer comparação.

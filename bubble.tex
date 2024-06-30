@@ -5,7 +5,7 @@ Um fato interessante é que o nome do algoritmo faz referência às bolhas em be
 
 \subsection{Exemplo}
 Seja $M$ o vetor [4,3,2,1,0].
-Na primeira passagem da primeira malha de repetição, será detectado que os elementos 4 e 3 estão em posições erradas e, assim, serão trocados, deixando a lista com os valores [3,4,2,1,0]. Posteriormente, será detectado que os elementos 4 e 2 estão trocados e, assim como no primeiro passo, ambos serão permutados e, como resultado, a sequência tornar-se-á [3,2,4,1,0]. Sendo assim, a última execução da primeira passagem posicionará o elemento 4 na última possição da lista, garantindo que o maior elemento esteja na posição correta.
+Na primeira passagem da primeira malha de repetição, será detectado que os elementos 4 e 3 estão em posições erradas e, assim, serão trocados, deixando a lista com os valores [3,4,2,1,0]. Posteriormente, será identificado que os elementos 4 e 2 estão trocados e, assim como no primeiro passo, ambos serão permutados, resultando na sequência [3,2,4,1,0]. Sendo assim, a última execução da primeira passagem posicionará o elemento 4 na última possição da lista, garantindo que o maior elemento esteja na posição correta.
 O algoritmo continuará realizando estes passos, isto é, trocar o elemento $j$ com o $j+1$ se o primeiro for maior que o segundo até que, na 5ª passagem, (pois a lista possui 5 elementos), a lista estará totalmente ordenada.
 
 Destarte, seguem as impressões do vetor a cada modificação realizada. 
@@ -25,10 +25,10 @@ Destarte, seguem as impressões do vetor a cada modificação realizada.
 \end{lstlisting}
 %TODO adicionar, de fato, todas as mudanças
 
-Perceptivelmente, o maior elemento é, a cada modificação, levado uma posição para a direita até estar na posição correta. 
+Perceptivelmente, o maior elemento é, a cada modificação, levado uma posição para a direita, até estar na posição correta. 
 \newpage
 \subsection{Implementação}
-A seguir, encontra-se o código utilizado na implementação do algoritmo em questão no Python:
+A seguir, encontra-se o código utilizado na implementação do algoritmo em questão:
 
 \begin{lstlisting}
 def bubble(V, n):
@@ -45,7 +45,7 @@ def bubble(V, n):
 \end{lstlisting}
 
 
-Caso a lista já esteja ordenada, o \code{isIncreasing} continuará, na primeira execução da malha de repetição, com o valor \code{True} e, por isso, o comando \code{break} será executado, parando, assim, a ordenação.
+Caso a lista já esteja ordenada, o \code{isIncreasing} continuará, na primeira execução da malha de repetição, com o valor \code{True} e, por isso, o comando \code{break} será executado, parando a execução.
 
 Constata-se, dessa forma, que, ao contrário do algoritmo anterior, este não realizará todas as etapas caso a lista já esteja ordenada, pois a variável\linebreak \code{isIncreasing} funciona como um verificador.
 
