@@ -1,6 +1,6 @@
 \section{Resultados}
 Nesta seção, será debatido acerca dos resultados obtidos por meio dos dois testes realizados. O primeiro visou analisar o tempo médio de cada algoritmo, bem como a sua variância. 
-No segundo teste, por outro lado, buscou-se avaliar o comportamento dos algoritmos bolha e inserção quando submetidos a listas com diferentes taxas de ordenação, sendo estas 1\%, 3\%, 5\%, 10\% e, por fim, 50\%. 
+No segundo teste, por outro lado, buscou-se avaliar o comportamento dos algoritmos bolha e inserção quando submetidos a vetores com diferentes taxas de ordenação, sendo estas 1\%, 3\%, 5\%, 10\% e, por fim, 50\%. 
 
 
 \subsection{Variação na quantidade de elementos}
@@ -26,7 +26,7 @@ Entretanto, é preciso ressaltar que, se existisse uma variação significativa 
         \label{tab:tempos_algoritmos}
     \end{table}
 
-O bolha, apesar de variar dependendo da taxa de ordenação, possui o maior tempo necessário para ordenar. Em seguida, o algoritmo de inserção detém o segundo maior período para organizar a lista, e isso se dá pelo fato de que o inserção possui uma complexidade quadrática independente da posição inicial dos elementos. 
+O bolha, apesar de variar dependendo da taxa de ordenação, possui o maior tempo necessário para ordenar. Em seguida, o algoritmo de inserção detém o segundo maior período para organizar a sequência, e isso se dá pelo fato de que o inserção possui uma complexidade quadrática independente da posição inicial dos elementos. 
 
 O algoritmo de seleção, como esperado, contém o melhor tempo de resposta dentre os algoritmos de comparação, tendo em vista que, além de ser mais eficiente em listas com alguns elementos ordenados, realiza menos permutações que o bolha. 
 
@@ -57,4 +57,4 @@ Inicialmente, quando ambos os algoritmos são submetidos a uma lista já ordenad
 
 Por outro lado, o algoritmo de seleção apresentou um crescimento maior quando intensificada a desordenação da lista, uma vez que a quantidade de comutações realizadas pelo algoritmo tende a se aproximar a do bubble, ou seja, quanto mais ordenada a lista, mais eficiente o seleção é em comparação ao segundo.
 
-Portanto, o algoritmo de seleção é mais eficiente do que o bolha, ainda quando submetido a listas com diferentes taxas de ordenação. Contudo, o seleção possui uma taxa de crescimento ligeiramente maior do que o bolha quando aumentada a porcentagem de embaralhamento.
+Portanto, o algoritmo de seleção é mais eficiente do que o bolha, ainda quando submetido a sequências com diferentes taxas de ordenação. Contudo, o seleção possui uma taxa de crescimento ligeiramente maior do que o bolha quando aumentada a porcentagem de embaralhamento.

@@ -120,7 +120,7 @@ Durante a execução dos algoritmos, foi utilizada uma máquina com as seguintes
 % TODO revisar o código
 Adicionalmente, a fim de minimizar possíveis interferências nos resultados dos testes, os códigos foram executados com o mínimo de programas em segundo plano. 
 Para computar a média de execução, foi criada uma função na qual que retornava a média e o desvio padrão das 10 itinerações do mesmo algoritmos.
-Além disso, foram ignoradas possíveis margens de erros da função que embaralha as listas. Contudo, essa margem de erro torna-se desprezível devido ao tamanho das listas utilizadas.
+Além disso, foram ignoradas possíveis margens de erros da função que embaralha as sequências. Contudo, essa margem de erro torna-se desprezível devido ao tamanho das listas utilizadas.
 
 Por fim, na implementação dos códigos na linguagem C, foi importada a biblioteca externa \code{stdbool.h} a fim de criar variáveis booleanas. Além disso, para possibilitar a importação das funções para o arquivo em Python, foi executado, no terminal, o comando \code{gcc -shared -fPIC -o libsortings.so main.c}, cuja função foi transformar as funções em uma biblioteca, possibilitando a invocação destes no Python.
 
@@ -128,10 +128,10 @@ Por fim, na implementação dos códigos na linguagem C, foi importada a bibliot
 
 \subsection*{Testes}
     Para a realização do relatório, foram realizados dois testes. 
-    O primeiro focou em observar os impactos causados pelo tamanho da lista a ser ordenada, ou seja, como o desvio padrão e a média mudam ao aumentar ou diminuir o tamanho da lista a ser ordenada por cada algoritmo. 
-    Para isso, foi criada uma malha de repetição e computados as médias e os desvios-padrões de cada algoritmo com listas de tamanhos 1000, 5000, 10000, 50000 e 100000.
+    O primeiro focou em observar os impactos causados pelo tamanho da sequência a ser ordenada, ou seja, como o desvio padrão e a média mudam ao aumentar ou diminuir o tamanho da lista a ser ordenada por cada algoritmo. 
+    Para isso, foi criada uma malha de repetição e computados as médias e os desvios-padrões de cada algoritmo com sequências de tamanhos 1000, 5000, 10000, 50000 e 100000.
     
-    O segundo, por outro lado, visou elucidar acerca das mudanças causadas pela taxa de ordenação de uma lista.
+    O segundo, por outro lado, visou elucidar acerca das mudanças causadas pela taxa de ordenação de um vetor.
     Para isso, foi estabelecida uma segunda malha de repetição, na qual também foram computados as médias e os desvios-padrões de cada algoritmo, mas com uma lista de 100000 elementos e com porcentagens de ordenação de 1\%, 3\%, 5\%, 10\% e 50\%.
     
 

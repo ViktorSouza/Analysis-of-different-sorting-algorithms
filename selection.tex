@@ -1,13 +1,13 @@
 \section{Algoritmo de seleção}
 O algoritmo de seleção é um algoritmo de ordenação no qual, a cada itineração, o menor elemento da lista é garantido estar na posição correta. Dessa forma, na primeira itineração, assegura-se que o menor elemento ficará na primeira posição da lista, na segunda itineração, o segundo elemento, e assim por diante. 
-Uma observação pertinente é que a quantidade de comparações a ser feita independe da porcentagem de ordenação da lista.
+Uma observação pertinente é que a quantidade de comparações a ser feita independe da porcentagem de ordenação do vetor.
 
 \subsection{Exemplo}
-Seja M uma lista \code{[4,3,2,1,0]}. Na primeira passagem, o algoritmo detectará o menor elemento da lista e, logo após, irá permutá-lo com o primeiro elemento da lista, ou seja, o elemento 4 e 0 serão trocados de lugar. Na segunda passagem, começando pelo segundo elemento, a segunda malha de repetição irá detectar o segundo menor elemento e, similarmente, irá permutá-lo com o segundo elemento da lista. Nas próximas execuções, a forma é análoga.
+Seja M a lista \code{[4,3,2,1,0]}. Na primeira passagem, o algoritmo detectará o menor elemento da sequência e, logo após, irá permutá-lo com o primeiro elemento da lista, ou seja, o elemento 4 e 0 serão trocados de lugar. Na segunda passagem, começando pelo segundo elemento, a segunda malha de repetição irá detectar o segundo menor elemento e, similarmente, irá permutá-lo com o segundo elemento da lista. Nas próximas execuções, a forma é análoga.
 
 Na n-ésima passagem, onde $n$ é o tamanho da lista, todos os elementos estarão em ordem crescente e, portanto, ordenados.
 
-Assim, seguem as impressões da lista a cada modificação.
+Assim, seguem as impressões do vetor a cada modificação.
 
 \begin{lstlisting}
 [4, 3, 2, 1, 0]
@@ -18,7 +18,7 @@ Assim, seguem as impressões da lista a cada modificação.
 [0, 1, 2, 3, 4]
 \end{lstlisting}
 
-Percebe-se que, mesmo a lista já estando ordenada, o algoritmo continuará realizando os comandos, ou seja, o número de passagens a ser feita não é mudado devido às condições iniciais de ordenação.
+Percebe-se que, mesmo o vetor já estando ordenado, o algoritmo continuará realizando os comandos, ou seja, o número de passagens a serem feitas não é mudado devido às condições iniciais de ordenação.
 
 \newpage
 \subsection{Implementação}

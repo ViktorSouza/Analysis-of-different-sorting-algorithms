@@ -1,16 +1,16 @@
 \section{Algoritmo de contagem}
-Diferentemente dos algoritmos outrora discutidos, o contagem possui uma complexidade linear, isto é, o tempo levado para ordenar cresce proporcionalmente com o tamanho da lista recebida. 
+Diferentemente dos algoritmos outrora discutidos, o contagem possui uma complexidade linear, isto é, o tempo levado para ordenar cresce proporcionalmente com o tamanho da sequência recebida. 
 
-Em relação ao uso de memória, contudo, há uma grande desvantagem no algoritmo: devido ao uso de uma lista auxiliar, esta possuirá $\max({lista})-\min({lista}) $ elementos; ou seja, caso o maior elemento seja 5000 e o menor 1000, a lista auxiliar possuirá de 4000 elementos.
+Em relação ao uso de memória, contudo, há uma grande desvantagem no algoritmo: devido ao uso de um vetor auxiliar, este possuirá $\max({lista})-\min({lista}) $ elementos; ou seja, caso o maior elemento seja 5000 e o menor 1000, a lista em questão possuirá 4000 elementos.
 
 Dessa forma, o algoritmo possui um melhor proveito se utilizado para listas com pouca variação de tamanho entre os seus elementos.
 
 \subsection{Exemplo}
-Seja $M$ a lista $[4,2,3,1,4,2,2,0]$. Como a diferença entre o maior e o menor é elemento é 4, a lista auxiliar $Aux$ será de tamanho 4.
-Assim, a lista auxiliar $Aux$ será da seguinte forma (assumindo que o primeiro elemento é $Aux[0]$): o primeiro elemento terá o valor igual à quantidade de zeros na lista original, que é 1, o segundo elemento também será 1 por motivo análogo, e o terceiro elemento de $Aux$, por outro lado, receberá o valor 3, uma vez que há três elementos 2 na lista original. Essa lógica prevalecerá até último elemento.
-Assim, de início, a lista $Aux$ será [1,1,3,1,2].
+Seja $M$ o vetor $[4,2,3,1,4,2,2,0]$. Como a diferença entre o maior e o menor é elemento é 4, a sequência auxiliar $Aux$ será de tamanho 4.
+Assim, $Aux$ será da seguinte forma (assumindo que o primeiro elemento é $Aux[0]$): o primeiro elemento terá o valor igual à quantidade de zeros no vetor original, que é 1; o segundo elemento também será 1 por motivo análogo, e o terceiro elemento de $Aux$, por outro lado, receberá o valor 3, uma vez que há três elementos 2 na sequência original. Essa lógica prevalecerá até último elemento.
+Assim, de início, a sequência numérica $Aux$ será [1,1,3,1,2].
 
-Em seguida, começará a modificação da lista original: serão adicionados à lista original $n$ vezes o elemento referente ao índice da lista auxiliar, ou seja, como $Aux[0]$ é igual a 1, será adicionado um zero a $M$ (adicionando da esquerda para a direita e um ao lado do outro). Em $Aux[2]$, por exemplo, o elemento é 3 e, assim, será adicionado o elemento 2 três vezes seguidas à lista $M$.
+Em seguida, começará a modificação da sequência original: serão adicionados à lista original $n$ vezes o elemento referente ao índice de $Aux$, ou seja, como $Aux[0]$ é igual a 1, será adicionado um zero a $M$ (adicionando da esquerda para a direita e um ao lado do outro). Em $Aux[2]$, por exemplo, o elemento é 3 e, assim, será adicionado o elemento 2 três vezes seguidas à lista $M$.
 
 Seguem os valores de \code{Aux} a cada modificação:
 \begin{lstlisting}

@@ -5,11 +5,11 @@ O algoritmo de inserção possui, como principal característica, a asseguraçã
 \subsection{Exemplo}
 Seja, para fins de exemplificação, $V$ a lista $[4,3,2,1,0]$.  
 
-O algoritmo em questão funcionará da seguinte forma: a lista começa dada como ordenada até que se ache um $j$ tal que $V[j]>V[j+1]$, onde $j$ é um inteiro maior ou igual a zero e menor que o tamanho da lista menos um. 
-Caso isso ocorra, o algoritmo trocará os dois valores e comparará, da mesma forma, $V[j-1]$ e $V[j]$. Quando o valor da antiga posição $j$ for menor do que a posição sucessora, garante-se, então, que a lista está ordenada de 0 até $j+1$. Contudo, caso não exista um $j$, então o algoritmo indica que a lista já está ordenada e, assim, evita mais comparações.
+O algoritmo em questão funcionará da seguinte forma: a sequência começa dada como ordenada até que se ache um $j$ tal que $V[j]>V[j+1]$, onde $j$ é um inteiro maior ou igual a zero e menor que o tamanho da lista menos um. 
+Caso isso ocorra, o algoritmo trocará os dois valores e comparará, da mesma forma, $V[j-1]$ e $V[j]$. Quando o valor da antiga posição $j$ for menor do que a posição sucessora, garante-se, então, que a sequência está ordenada de 0 até $j+1$. Contudo, caso não exista um $j$, então o algoritmo indica que a lista já está ordenada e, assim, evita mais comparações.
 \\
 
-Logo, tomando a lista $M$, caso esta fosse impressa a cada modificação, os resultados seriam:
+Logo, tomando o vetor $M$, caso este fosse impresso a cada modificação, os resultados seriam:
 \begin{lstlisting}
 [4, 3, 2, 1, 0]
 [3, 4, 2, 1, 0]
@@ -44,10 +44,10 @@ def insertion(V, n):
 \end{lstlisting}
 
 \subsection{Quantidade de comparações}
-Tendo em vista que as comparações realizadas depende da lista, os casos serão analisados. 
+Tendo em vista que as comparações realizadas dependem do vetor, os casos serão analisados. 
 
 Caso a lista com $n$ elementos esteja em ordem, o algoritmo detectará na primeira itineração devido à permanência do valor verdadeiro da variável \code{isIncreasing}, ou seja, serão realizadas $n$ comparações.
 
 Por outro lado, na hipótese da lista está totalmente desordenada, haverá $n(n+1)\over 2$. A prova é análoga à do bolha, uma vez que haverá $n$ comparações na primeira execução, $n-1$ na segunda, e assim por diante, ou seja, serão realizadas $n + (n-1)+(n-2)+\cdots+1 = {n(n+1)\over 2}$ comparações.
 
-Finalmente, nos outros casos, a análise é, assim como no algoritmo anterior, complexa. Contudo, em cenários nos quais a lista não se enquadra nos casos supracitados, o algoritmo possui um comportamento quadrático\cite{insertioncomplexity}.
+Finalmente, nos outros casos, a análise é, assim como no algoritmo anterior, complexa. Contudo, em cenários nos quais a sequência não se enquadra nos casos supracitados, o algoritmo possui um comportamento quadrático\cite{insertioncomplexity}.

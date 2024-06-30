@@ -1,14 +1,14 @@
 \section{Algoritmo de bolha}
-O algoritmo de bolha é um algoritmo cuja complexidade é, assim como o anterior, quadrática. Sua principal característica é que, na n-ésima passagem pela lista, o algoritmo assegura estarem ordenados os n últimos elementos da lista.
+O algoritmo de bolha é um algoritmo cuja complexidade é, assim como o anterior, quadrática. Sua principal característica é que, na n-ésima passagem pela lista, o método de ordenação assegura estarem ordenados os n últimos elementos.
 Um fato interessante é que o nome do algoritmo faz referência às bolhas em bebidas, uma vez que as bolhas maiores sobem mais rapidamente do que as menores.
 
 
 \subsection{Exemplo}
-Seja $M$ uma lista [4,3,2,1,0].
-Na primeira passagem da primeira malha de repetição, será detectado que os elementos 4 e 3 estão em posições erradas e, assim, serão trocados, deixando a lista com os valores [3,4,2,1,0]. Posteriormente, será detectado que os elementos 4 e 2 estão trocados e, assim como no primeiro passo, ambos serão permutados e, como resultado, a lista tornar-se-á [3,2,4,1,0]. Sendo assim, a última execução da primeira passagem posicionará o elemento 4 na última possição da lista, garantindo que o maior elemento esteja na posição correta.
+Seja $M$ o vetor [4,3,2,1,0].
+Na primeira passagem da primeira malha de repetição, será detectado que os elementos 4 e 3 estão em posições erradas e, assim, serão trocados, deixando a lista com os valores [3,4,2,1,0]. Posteriormente, será detectado que os elementos 4 e 2 estão trocados e, assim como no primeiro passo, ambos serão permutados e, como resultado, a sequência tornar-se-á [3,2,4,1,0]. Sendo assim, a última execução da primeira passagem posicionará o elemento 4 na última possição da lista, garantindo que o maior elemento esteja na posição correta.
 O algoritmo continuará realizando estes passos, isto é, trocar o elemento $j$ com o $j+1$ se o primeiro for maior que o segundo até que, na 5ª passagem, (pois a lista possui 5 elementos), a lista estará totalmente ordenada.
 
-Destarte, seguem as impressões da lista a cada modificação realizada. 
+Destarte, seguem as impressões do vetor a cada modificação realizada. 
 
 \begin{lstlisting}
 [4, 3, 2, 1, 0]
