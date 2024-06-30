@@ -33,7 +33,7 @@ from sys import platform
 import ctypes
 import json
 
-debug = True
+debug = False
 
 
 random.seed(32)
@@ -308,8 +308,11 @@ def first_test():
 
     sizes = [200, 500, 1000, 1500] if debug else [1000, 5000, 10000, 50000, 100000]
 
-    algorithms = [counting, countingC, bubbleC, selectionC, insertionC]
-    algorithms_names = ["Contagem", "Contagem C", "Bolha C", "Seleção C", "Inserção C"]
+    # algorithms = [counting, countingC, bubbleC, selectionC, insertionC]
+    # algorithms_names = ["Contagem", "Contagem C", "Bolha C", "Seleção C", "Inserção C"]
+    algorithms = [selection, insertion, bubble, counting]
+    algorithms_names = ["Seleção", "Inserção", "Bolha", "Contagem"]
+
     # A fim de diminuir possiveis variâncias, foram criadas as listas antes
     arrays = [[randint(0, 9999) for _ in range(i)] for i in sizes]
     for i, algorithm in enumerate(algorithms):

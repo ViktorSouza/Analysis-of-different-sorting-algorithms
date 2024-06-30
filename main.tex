@@ -7,6 +7,10 @@
 % \usemintedstyle{manni}
 \usepackage{listings}
 
+% \usepackage{siunitx}
+% \sisetup{table-number-alignment=center, exponent-product=\cdot}
+
+
 
 
 \usepackage{xcolor} % for setting colors
@@ -91,11 +95,15 @@
 
 \subsection*{Resumo}
 O relatório a seguir visa dissertar acerca algoritmos de ordenação clássicos, tais como bolha, contagem, inserção e seleção, bem como investigar exemplos, apresentar a implementação em Python e elucidar como o algoritmo se comporta ao ordenar uma lista.
-
 Além disso, é verificado como a eficiência dos algoritmos variam dadas diferentes condições iniciais, tais como porcentagem de ordenação e composição da lista a ser ordenada. 
-
 Por fim, foram implementados os algoritmos na linguagem C a fim de analisar os seus comportamentos em uma linguagem compilada, em contraste com a linguagem utilizada, Python, que é interpretada.
 \
+
+\subsection*{Abstract}
+The following report seeks to dissertate the classic ordering algorithms, such as bubble, counting, insertion, and selection, as well as investigate examples, present Python's implementation, and elucidate how each algorithm comports when ordering a list.
+In addition, it is verified how the efficiency varies given different initial conditions, like the ordination percentage and the list composition.
+Finally, the algorithms were implemented in C to analyze how they comport in a compiled language, contrasting with Python, an interpreted language.
+
 \section*{Metodologia}
 Na criação do relatório, os testes dos algoritmos foram realizados utilizando a linguagem de programação Python, com a versão 3.10.11, no sistema operacional Windows.
 Além disso, os arquivos em C foram compilados utilizando o GCC na versão 13.1.0.
@@ -114,9 +122,10 @@ Adicionalmente, a fim de minimizar possíveis interferências nos resultados dos
 Para computar a média de execução, foi criada uma função na qual que retornava a média e o desvio padrão das 10 itinerações do mesmo algoritmos.
 Além disso, foram ignoradas possíveis margens de erros da função que embaralha as listas. Contudo, essa margem de erro torna-se desprezível devido ao tamanho das listas utilizadas.
 
-Por fim, na implementação dos códigos na linguagem C, foi importada a biblioteca externa \code{stdbool.h} a fim de criar variáveis booleanas. Além disso, para possibilitar a importação das funções para o arquivo em Python, foi executado, no terminal, o 
-%TODO colocar o código executado
-\newpage
+Por fim, na implementação dos códigos na linguagem C, foi importada a biblioteca externa \code{stdbool.h} a fim de criar variáveis booleanas. Além disso, para possibilitar a importação das funções para o arquivo em Python, foi executado, no terminal, o comando \code{gcc -shared -fPIC -o libsortings.so main.c}, cuja função foi transformar as funções em uma biblioteca, possibilitando a invocação destes no Python.
+
+\noindent\textbf{Palavras-chave:} insertion, bubble, counting, selection, algoritmos, ordenação, análise;
+
 \subsection*{Testes}
     Para a realização do relatório, foram realizados dois testes. 
     O primeiro focou em observar os impactos causados pelo tamanho da lista a ser ordenada, ou seja, como o desvio padrão e a média mudam ao aumentar ou diminuir o tamanho da lista a ser ordenada por cada algoritmo. 
@@ -129,7 +138,6 @@ Por fim, na implementação dos códigos na linguagem C, foi importada a bibliot
     Para computar a média, foi criada uma função cujos parâmetros são uma lista e o tamanho desta, respectivamente. O desvio padrão, sob o mesmo ponto de vista, foi calculado por meio de uma função que recebe os mesmos parâmetros que a função outrora citada.
     
 
-\noindent\textbf{Palavras-chave:} insertion, bubble, counting, selection, algoritmos, ordenação, análise;
 
 \newpage
 \tableofcontents
@@ -140,8 +148,8 @@ Por fim, na implementação dos códigos na linguagem C, foi importada a bibliot
 
 
 \include{results.tex}
-\include{conclusion.tex}
 \include{c.tex}
+\include{conclusion.tex}
 
 \section{Considerações finais}
 A realização deste relatório possibilitou o aprendizado em diversas áreas do conhecimento, especialmente na análise de algoritmos, ao separá-los por casos e verificá-los individualmente.
