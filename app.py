@@ -33,7 +33,7 @@ from sys import platform
 import ctypes
 import json
 
-debug = False
+debug = True
 
 
 random.seed(32)
@@ -301,17 +301,22 @@ def GraficaSortings(mpontos, mediaMCMPi, desvioMCMPi):
 algorithms_names = []
 
 
-def first_test():
+def first_test(lang="py"):
     global algorithms_names
     avg_exp_1 = []
     std_exp_1 = []
 
     sizes = [200, 500, 1000, 1500] if debug else [1000, 5000, 10000, 50000, 100000]
-
-    # algorithms = [counting, countingC, bubbleC, selectionC, insertionC]
-    # algorithms_names = ["Contagem", "Contagem C", "Bolha C", "Seleção C", "Inserção C"]
-    algorithms = [selection, insertion, bubble, counting]
-    algorithms_names = ["Seleção", "Inserção", "Bolha", "Contagem"]
+    algorithms = (
+        [selection, insertion, bubble, counting]
+        if lang == "py"
+        else [counting, countingC, bubbleC, selectionC, insertionC]
+    )
+    algorithms_names = (
+        ["Seleção", "Inserção", "Bolha", "Contagem"]
+        if lang == "py"
+        else ["Contagem", "Contagem C", "Bolha C", "Seleção C", "Inserção C"]
+    )
 
     # A fim de diminuir possiveis variâncias, foram criadas as listas antes
     arrays = [[randint(0, 9999) for _ in range(i)] for i in sizes]
@@ -381,8 +386,9 @@ def second_test():
 
 
 def main():
-    first_test()
-    second_test()
+    first_test("c")
+    # first_test('py')
+    # second_test()
 
 
 main()
